@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'about_us_page.dart';
+
 class HomePage extends StatelessWidget {
+  final double fontsize = 23.0;
+  const HomePage({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,15 +21,17 @@ class HomePage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Logo firmy
+
                 Image.asset('assets/icons/logo2.png'),
 
                 SizedBox(height: 50.0), // Odstęp między logo a przyciskami
 
-                // Przyciski
                 ElevatedButton(
                   onPressed: () {
-
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const AboutUs()),
+                    );
                   },
 
                   style: ElevatedButton.styleFrom(
@@ -38,7 +44,14 @@ class HomePage extends StatelessWidget {
                     ),
                     minimumSize: Size(210.0, 55.0),
                   ),
-                  child: Text('O nas'),
+                  child: Text(
+                    'O nas',
+                    style: TextStyle(
+                        fontSize: fontsize,
+                        color: Colors.white
+                    ),
+
+                  ),
                 ),
                 SizedBox(height: 15.0), // Odstęp między przyciskami
                 ElevatedButton(
@@ -54,7 +67,12 @@ class HomePage extends StatelessWidget {
                     ),
                     minimumSize: Size(210.0, 55.0),
                   ),
-                  child: Text('Informacje'),
+                  child: Text(
+                    'Informacje',
+                    style: TextStyle(
+                        fontSize: fontsize,
+                        color: Colors.white
+                  ),),
                 ),
                 SizedBox(height: 15.0),
                 ElevatedButton(
@@ -70,7 +88,13 @@ class HomePage extends StatelessWidget {
                     ),
                     minimumSize: Size(210.0, 55.0),
                   ),
-                  child: Text('Zwiedzanie'),
+                  child: Text(
+                      'Zwiedzanie',
+                      style: TextStyle(
+                          fontSize: fontsize,
+                          color: Colors.white
+                    ),
+                  ),
                 ),
                 SizedBox(height: 15.0),
                 ElevatedButton(
@@ -86,7 +110,13 @@ class HomePage extends StatelessWidget {
                     ),
                     minimumSize: Size(210.0, 55.0),
                   ),
-                  child: Text('Oceń aplikacje'),
+                  child: Text(
+                      'Oceń aplikacje',
+                      style: TextStyle(
+                         fontSize: fontsize,
+                         color: Colors.white
+                    ),
+                  ),
                 ),
               ],
             ),

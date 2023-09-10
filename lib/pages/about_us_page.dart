@@ -23,7 +23,7 @@ class AboutUs extends StatelessWidget {
                   top: 30, // Położenie od góry
                   left: 10, // Położenie od lewej
                   child: IconButton(
-                    icon: Icon(Icons.arrow_back),
+                    icon: const Icon(Icons.arrow_back),
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -32,10 +32,10 @@ class AboutUs extends StatelessWidget {
                     },
                   ),
                 ),
-                Align(
+                const Align(
                   alignment: Alignment.bottomLeft,
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 20.0,bottom: 10.0), // Dodaj odstęp z lewej strony
+                    padding: EdgeInsets.only(left: 20.0,bottom: 10.0), // Dodaj odstęp z lewej strony
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start, // Wyśrodkuj do lewej krawędzi
@@ -46,6 +46,7 @@ class AboutUs extends StatelessWidget {
                             color: Colors.white,
                             fontSize: 24.0,
                             fontWeight: FontWeight.bold,
+                            fontFamily: 'Lato'
                           ),
                         ),
                         Text(
@@ -67,8 +68,8 @@ class AboutUs extends StatelessWidget {
           // Białe tło z tekstem
           Container(
             color: Colors.white,
-            padding: EdgeInsets.all(20.0),
-            child: Text(
+            padding: const EdgeInsets.all(20.0),
+            child: const Text(
               'Twój tekst na białym tle rzemieślnicza manufaktura czekolady Twój tekst na białym '
                   'tle rzemieślnicza manufaktura czekolady Twój tekst na białym tle rzemieślnicza manufaktura czekolady',
               style: TextStyle(

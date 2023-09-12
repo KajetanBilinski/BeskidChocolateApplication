@@ -67,16 +67,20 @@ class _HomePageState extends State<HomePage> {
     GlobalVariables.buttonWidthAboutUs  = MediaQuery.of(context).size.width * 0.4;
     GlobalVariables.buttonHeightAboutUs  = MediaQuery.of(context).size.height * 0.045;
     GlobalVariables.iconSizeAboutUs  = MediaQuery.of(context).size.width * 0.06;
+    GlobalVariables.icon2SizeAboutUs  = MediaQuery.of(context).size.width * 0.11;
     GlobalVariables.noteWidthAboutUs  = MediaQuery.of(context).size.width * 0.95;
     GlobalVariables.noteHeightAboutUs  = MediaQuery.of(context).size.height * 0.35;
     GlobalVariables.spaceTitleTextAboutUs  = MediaQuery.of(context).size.height * 0.02;
     GlobalVariables.spaceTextAboutUs  = MediaQuery.of(context).size.height * 0.02;
     GlobalVariables.spaceIconTextAboutUs  = MediaQuery.of(context).size.width * 0.04;
-    GlobalVariables.spaceNoteHeightAboutUs  = MediaQuery.of(context).size.height * 0.1;
+    GlobalVariables.spaceNoteHeightAboutUs  = MediaQuery.of(context).size.height * 0.11;
     GlobalVariables.spaceNoteWidthAboutUs  = MediaQuery.of(context).size.width * 0.07;
     GlobalVariables.spaceRowNoteAboutUs  = MediaQuery.of(context).size.height * 0.1;
     GlobalVariables.spaceButtonAboutUs  = MediaQuery.of(context).size.height * 0.025;
     GlobalVariables.spaceText2AboutUs  = MediaQuery.of(context).size.height * 0.025;
+    GlobalVariables.spaceNote2HeightAboutUs  = MediaQuery.of(context).size.height * 0.05;
+    GlobalVariables.spaceIconIconAboutUs  = MediaQuery.of(context).size.width * 0.1;
+
 
 
 
@@ -124,7 +128,6 @@ class _HomePageState extends State<HomePage> {
                     MaterialPageRoute(builder: (context) => const AboutUs()),
                   );
                 },
-
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.transparent,
                   foregroundColor: Colors.white,
@@ -192,7 +195,7 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: GlobalVariables.spaceButtonsHomePage),
               ElevatedButton(
                 onPressed: () {
-                  _launchWebsite();
+                  _launchWebsite('https://beskidchocolate.pl');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.transparent,
@@ -220,8 +223,8 @@ class _HomePageState extends State<HomePage> {
     )));
   }
 
-  _launchWebsite() async {
-    final Uri url = Uri.parse('https://beskidchocolate.pl');
+  _launchWebsite(String website) async {
+    final Uri url = Uri.parse(website);
     if (!await launchUrl(url)) {
       throw Exception('Could not launch $url');
     }

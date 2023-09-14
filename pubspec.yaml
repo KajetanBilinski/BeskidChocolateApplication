@@ -66,6 +66,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/home_page/
+    - assets/images/presentation_main_page/
     - assets/icons/home_page/
     - assets/icons/about_us_page/
     - assets/text/

@@ -1,3 +1,4 @@
+import 'package:beskid_chcolate_app/pages/home_page.dart';
 import 'package:beskid_chcolate_app/utils/GlobalVariables.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -17,6 +18,30 @@ class AboutUs extends StatelessWidget {
 
                   Container(
                     color: Colors.white, // Tło będzie białe
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: GlobalVariables.spaceBackIconHeightAboutUs,
+                        ),
+                      Row(
+                        children: [
+                          SizedBox(
+                              width: GlobalVariables.spaceBackIconWidthAboutUs),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => const HomePage()),
+                              );
+                            },
+                            child: const Icon(Icons.arrow_back)
+                        )],
+                      )
+
+                    ],
                   ),
                   Column(
                     children : [

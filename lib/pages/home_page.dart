@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:beskid_chcolate_app/pages/presentation_main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'about_us_page.dart';
@@ -91,10 +92,7 @@ class _HomePageState extends State<HomePage> {
 
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const AboutUs()),
-                  );
+
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.transparent,
@@ -118,7 +116,10 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: GlobalVariables.spaceButtonsHomePage),// Odstęp między przyciskami
               ElevatedButton(
                 onPressed: () {
-
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const AboutUs()),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.transparent,
@@ -140,7 +141,10 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: GlobalVariables.spaceButtonsHomePage),
               ElevatedButton(
                 onPressed: () {
-
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const PresentationMain()),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.transparent,

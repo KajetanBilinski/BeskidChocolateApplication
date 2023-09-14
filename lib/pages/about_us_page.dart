@@ -3,11 +3,7 @@ import 'package:beskid_chcolate_app/utils/GlobalVariables.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 class AboutUs extends StatelessWidget {
-
-
   const AboutUs({super.key});
-
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

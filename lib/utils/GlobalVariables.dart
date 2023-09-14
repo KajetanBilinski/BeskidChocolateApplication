@@ -25,6 +25,8 @@ class GlobalVariables {
   static double spaceRowNoteAboutUs = 0.0;
   static double spaceButtonAboutUs = 0.0;
   static double icon2SizeAboutUs = 0.0;
+  static double spaceBackIconHeightAboutUs=0.0;
+  static double spaceBackIconWidthAboutUs=0.0;
 
 
 

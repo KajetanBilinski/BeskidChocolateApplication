@@ -34,7 +34,10 @@ class AboutUs extends StatelessWidget {
                                 MaterialPageRoute(builder: (context) => const HomePage()),
                               );
                             },
-                            child: const Icon(Icons.arrow_back)
+                            child: Icon(
+                                Icons.arrow_back,
+                                size: GlobalVariables.backIconSize
+                            )
                         )],
                       )
 

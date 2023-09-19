@@ -1,5 +1,8 @@
 
 class GlobalVariables {
+
+  static double backIconSize = 0.0;
+
   static double fontSizeButtonHomePage = 0.0;
   static double buttonWidthHomePage = 0.0;
   static double buttonHeightHomePage = 0.0;
@@ -27,6 +30,16 @@ class GlobalVariables {
   static double icon2SizeAboutUs = 0.0;
   static double spaceBackIconHeightAboutUs=0.0;
   static double spaceBackIconWidthAboutUs=0.0;
+
+  static double presentationButtonWidth=0.0;
+  static double presentationButtonHeight=0.0;
+  static double presentationSpaceButton=0.0;
+  static double presentationButtonTextSize=0.0;
+  static double presentationNumberTextSize=0.0;
+  static double presentationTitleTextSize=0.0;
+  static double presentationSpaceTitle=0.0;
+
+
 
 
 

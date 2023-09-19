@@ -30,8 +30,8 @@ class PresentationMain extends StatelessWidget {
                                         MaterialPageRoute(builder: (context) => const HomePage()),
                                       );
                                     },
-                                    child: const Icon(Icons.arrow_back,
-                                    size: 30,)
+                                    child: Icon(Icons.arrow_back,
+                                    size: GlobalVariables.backIconSize)
                                 )],
                             )
 
@@ -48,12 +48,12 @@ class PresentationMain extends StatelessWidget {
                               [
                                 SizedBox(
                                     width: GlobalVariables.spaceBackIconWidthAboutUs),
-                                const Text(
+                                Text(
                                   'Zwiedzanie',
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                       fontFamily: 'Lato',
-                                      fontSize: 30
+                                      fontSize: GlobalVariables.presentationTitleTextSize
                                   ),
                                 )
                               ],
@@ -66,10 +66,10 @@ class PresentationMain extends StatelessWidget {
                         Column(
                             children:
                             [
-                              SizedBox(height: 20),
+                              SizedBox(height: GlobalVariables.presentationSpaceTitle),
                               Container(
                                 alignment: Alignment.center,
-                                width: 350,
+                                width: GlobalVariables.presentationButtonWidth,
                                 child:
                                 Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -80,30 +80,31 @@ class PresentationMain extends StatelessWidget {
                                           '01',
                                           'CO TO ZNACZY BEAN TO BAR?'
                                       ),
-                                      SizedBox(height: 15),
+                                      SizedBox(height: GlobalVariables.presentationSpaceButton),
                                       createInkWell(
                                           'assets/images/presentation_main_page/sample.png',
                                           '02',
                                           'CZY CZEKOLADA TO SAŁATKA?'
                                       ),
-                                      SizedBox(height: 15),
+                                      SizedBox(height: GlobalVariables.presentationSpaceButton),
                                       createInkWell(
                                           'assets/images/presentation_main_page/sample.png',
-                                          '02',
+                                          '03',
+                                          'FERMENTACJA ZIAREN KAKAO'
+                                      ),
+                                      SizedBox(height: GlobalVariables.presentationSpaceButton),
+                                      createInkWell(
+                                          'assets/images/presentation_main_page/sample.png',
+                                          '04',
                                           'CZY CZEKOLADA TO SAŁATKA?'
                                       ),
-                                      SizedBox(height: 15),
+                                      SizedBox(height: GlobalVariables.presentationSpaceButton),
                                       createInkWell(
                                           'assets/images/presentation_main_page/sample.png',
-                                          '02',
+                                          '05',
                                           'CZY CZEKOLADA TO SAŁATKA?'
                                       ),
-                                      SizedBox(height: 15),
-                                      createInkWell(
-                                          'assets/images/presentation_main_page/sample.png',
-                                          '02',
-                                          'CZY CZEKOLADA TO SAŁATKA?'
-                                      )
+                                      SizedBox(height: GlobalVariables.presentationSpaceButton)
                                     ]
                                 ),
                               )
@@ -136,31 +137,31 @@ class PresentationMain extends StatelessWidget {
             borderRadius: BorderRadius.circular(20.0),
             child: Image.asset(
               imagePath,
-              width: 800,
-              height: 150,
+              width: GlobalVariables.presentationButtonWidth,
+              height: GlobalVariables.presentationButtonHeight,
               fit: BoxFit.cover,
             ),
           ),
           Positioned(
-            left: 10.0, // Odstęp od lewej strony
-            bottom: 10.0, // Odstęp od dolnej strony
+            left: 15.0, // Odstęp od lewej strony
+            bottom: 15.0, // Odstęp od dolnej strony
             child: RichText(
               text: TextSpan(
                 children: [
                   TextSpan(
                     text: number+'\n',
-                    style: const TextStyle(
+                    style:  TextStyle(
                       color: Colors.white,
-                      fontSize: 40.0,
+                      fontSize: GlobalVariables.presentationNumberTextSize,
                       fontFamily: 'Lato'
 
                     ),
                   ),
                   TextSpan(
                     text: text.toUpperCase(),
-                    style: const TextStyle(
+                    style:  TextStyle(
                         color: Colors.white,
-                        fontSize: 20.0,
+                        fontSize: GlobalVariables.presentationButtonTextSize,
                         fontFamily: 'Lato'
                     ),
                   ),

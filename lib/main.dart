@@ -28,6 +28,8 @@ class MyApp extends StatelessWidget {
 
 void initializeGlobalValues(BuildContext context)
 {
+  GlobalVariables.backIconSize = MediaQuery.of(context).size.height * 0.045;
+
   GlobalVariables.fontSizeButtonHomePage = MediaQuery.of(context).size.height * 0.03;
   GlobalVariables.buttonHeightHomePage = MediaQuery.of(context).size.height * 0.067;
   GlobalVariables.buttonWidthHomePage = MediaQuery.of(context).size.width * 0.55;
@@ -55,4 +57,12 @@ void initializeGlobalValues(BuildContext context)
   GlobalVariables.spaceIconIconAboutUs  = MediaQuery.of(context).size.width * 0.1;
   GlobalVariables.spaceBackIconHeightAboutUs  = MediaQuery.of(context).size.height * 0.07;
   GlobalVariables.spaceBackIconWidthAboutUs  = MediaQuery.of(context).size.width * 0.04;
+
+  GlobalVariables.presentationButtonWidth  = MediaQuery.of(context).size.width * 0.9;
+  GlobalVariables.presentationButtonHeight  = MediaQuery.of(context).size.height * 0.22;
+  GlobalVariables.presentationSpaceButton  = MediaQuery.of(context).size.height * 0.015;
+  GlobalVariables.presentationSpaceTitle  = MediaQuery.of(context).size.height * 0.04;
+  GlobalVariables.presentationButtonTextSize  = MediaQuery.of(context).size.height * 0.025;
+  GlobalVariables.presentationNumberTextSize  = MediaQuery.of(context).size.height * 0.04;
+  GlobalVariables.presentationTitleTextSize  = MediaQuery.of(context).size.height * 0.04;
 }

@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:beskid_chcolate_app/pages/presentation_main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -8,15 +7,12 @@ import '../utils/GlobalVariables.dart';
 
 class HomePage extends StatefulWidget {
 
-  //GlobalVariables. = MediaQuery.of(context).size.width * 0.05;
-
   const HomePage({super.key});
 
   @override
   _HomePageState createState() => _HomePageState();
 }
 class _HomePageState extends State<HomePage> {
-  final double fontsize = 23.0;
   final PageController _pageController = PageController();
   final List<String> imagePaths = [
     'assets/images/home_page/background_1.jpg',
@@ -27,14 +23,11 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    // Set initial page and start a timer to automatically advance the page
     _pageController.addListener(() {
       setState(() {
         currentPage = _pageController.page!.round();
       });
     });
-
-    // Start a timer to automatically advance the page
     Timer.periodic(Duration(seconds: 5), (timer) {
       if (currentPage < imagePaths.length - 1) {
         currentPage++;

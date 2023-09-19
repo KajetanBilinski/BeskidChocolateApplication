@@ -87,112 +87,69 @@ class _HomePageState extends State<HomePage> {
                    // Adjust the fit property as needed
                 ),
               ),
-
               SizedBox(height: GlobalVariables.spaceIconHomePage), // Odstęp między logo a przyciskami
+              createElevatedButton(
+                  'O nas', () {
 
-              ElevatedButton(
-                onPressed: () {
-
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.transparent,
-                  foregroundColor: Colors.white,
-                  side: BorderSide(color: Colors.white, width: 2.0),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  minimumSize: Size(GlobalVariables.buttonWidthHomePage, GlobalVariables.buttonHeightHomePage),
-                ),
-                child: Text(
-                  'O nas',
-                  style: TextStyle(
-                      fontSize: GlobalVariables.fontSizeButtonHomePage,
-                      color: Colors.white,
-                      fontFamily: 'Lato'
-                  ),
-
-                ),
+              }
               ),
               SizedBox(height: GlobalVariables.spaceButtonsHomePage),// Odstęp między przyciskami
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const AboutUs()),
-                  );
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.transparent,
-                  foregroundColor: Colors.white,
-                  side: BorderSide(color: Colors.white, width: 2.0),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  minimumSize: Size(GlobalVariables.buttonWidthHomePage, GlobalVariables.buttonHeightHomePage),
-                ),
-                child: Text(
-                  'Informacje',
-                  style: TextStyle(
-                      fontSize: GlobalVariables.fontSizeButtonHomePage,
-                      color: Colors.white,
-                      fontFamily: 'Lato'
-                  ),),
+              createElevatedButton(
+                  'Informacje', () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AboutUs()),
+                );
+              }
               ),
               SizedBox(height: GlobalVariables.spaceButtonsHomePage),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const PresentationMain()),
-                  );
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.transparent,
-                  foregroundColor: Colors.white,
-                  side: BorderSide(color: Colors.white, width: 2.0),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  minimumSize: Size(GlobalVariables.buttonWidthHomePage, GlobalVariables.buttonHeightHomePage),
-                ),
-                child: Text(
-                  'Zwiedzanie',
-                  style: TextStyle(
-                      fontSize: GlobalVariables.fontSizeButtonHomePage,
-                      color: Colors.white,
-                      fontFamily: 'Lato'
-                  ),
-                ),
+              createElevatedButton(
+                  'Zwiedzanie', () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const PresentationMain()),
+                    );
+                  }
               ),
               SizedBox(height: GlobalVariables.spaceButtonsHomePage),
-              ElevatedButton(
-                onPressed: () {
-                  _launchWebsite('https://beskidchocolate.pl');
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.transparent,
-                  foregroundColor: Colors.white,
-                  side: BorderSide(color: Colors.white, width: 2.0),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  minimumSize: Size(GlobalVariables.buttonWidthHomePage, GlobalVariables.buttonHeightHomePage),
-                ),
-                child: Text(
-                  'Oceń aplikacje',
-                  style: TextStyle(
-                      fontSize: GlobalVariables.fontSizeButtonHomePage,
-                      color: Colors.white,
-                      fontFamily: 'Lato'
-                  ),
-                ),
-              ),
+              createElevatedButton(
+                  'Oceń aplikacje', () {
+                    _launchWebsite('https://beskidchocolate.pl');
+                  }
+              )
             ],
           ),
         ),
       ],
 
     )));
+  }
+  Widget createElevatedButton
+      (
+          String text,
+          Null Function() onpressed
+      )
+  {
+    return ElevatedButton(
+      onPressed: onpressed,
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.white,
+        side: BorderSide(color: Colors.white, width: 2.0),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        minimumSize: Size(GlobalVariables.buttonWidthHomePage, GlobalVariables.buttonHeightHomePage),
+      ),
+      child: Text(
+        text,
+        style: TextStyle(
+            fontSize: GlobalVariables.fontSizeButtonHomePage,
+            color: Colors.white,
+            fontFamily: 'Lato'
+        ),
+      ),
+    );
   }
 
   _launchWebsite(String website) async {

@@ -1,4 +1,6 @@
 
+import 'package:beskid_chcolate_app/pages/presentation_page.dart';
+import 'package:beskid_chcolate_app/utils/UtilsJson.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/GlobalVariables.dart';
@@ -71,42 +73,7 @@ class PresentationMain extends StatelessWidget {
                                 alignment: Alignment.center,
                                 width: GlobalVariables.presentationButtonWidth,
                                 child:
-                                Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children:[
-                                      createInkWell(
-                                          'assets/images/presentation_main_page/sample.png',
-                                          '01',
-                                          'CO TO ZNACZY BEAN TO BAR?'
-                                      ),
-                                      SizedBox(height: GlobalVariables.presentationSpaceButton),
-                                      createInkWell(
-                                          'assets/images/presentation_main_page/sample.png',
-                                          '02',
-                                          'CZY CZEKOLADA TO SAŁATKA?'
-                                      ),
-                                      SizedBox(height: GlobalVariables.presentationSpaceButton),
-                                      createInkWell(
-                                          'assets/images/presentation_main_page/sample.png',
-                                          '03',
-                                          'FERMENTACJA ZIAREN KAKAO'
-                                      ),
-                                      SizedBox(height: GlobalVariables.presentationSpaceButton),
-                                      createInkWell(
-                                          'assets/images/presentation_main_page/sample.png',
-                                          '04',
-                                          'CZY CZEKOLADA TO SAŁATKA?'
-                                      ),
-                                      SizedBox(height: GlobalVariables.presentationSpaceButton),
-                                      createInkWell(
-                                          'assets/images/presentation_main_page/sample.png',
-                                          '05',
-                                          'CZY CZEKOLADA TO SAŁATKA?'
-                                      ),
-                                      SizedBox(height: GlobalVariables.presentationSpaceButton)
-                                    ]
-                                ),
+                                createFlexColumn(context)
                               )
 
                             ]
@@ -119,16 +86,42 @@ class PresentationMain extends StatelessWidget {
         );
 
   }
+  Widget createFlexColumn(BuildContext context)
+  {
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          for (int i = 1; i < UtilsJson.PMTextButtonTitles!.length+1; i++)
+            Column(
+              children:[
+                createInkWell(
+                    UtilsJson.PMImageButtons![i-1],
+                    ('0$i') as String,
+                    UtilsJson.PMTextButtonTitles![i-1],
+                    context
+                ),
+                SizedBox(height: GlobalVariables.presentationSpaceButton)
+              ]
+            ),
+        ],
+      );
+  }
+
   Widget createInkWell
       (
         String imagePath,
         String number,
-        String text
+        String text,
+        BuildContext context
       )
   {
     return InkWell(
       onTap: () {
-        // Obsługa kliknięcia
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => PresentationPage(number: int.parse(number)-1)),
+        );
       },
       child: Stack(
         alignment: Alignment.center,
@@ -143,13 +136,13 @@ class PresentationMain extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 15.0, // Odstęp od lewej strony
-            bottom: 15.0, // Odstęp od dolnej strony
+            left: 15.0,
+            bottom: 15.0,
             child: RichText(
               text: TextSpan(
                 children: [
                   TextSpan(
-                    text: number+'\n',
+                    text: '$number\n',
                     style:  TextStyle(
                       color: Colors.white,
                       fontSize: GlobalVariables.presentationNumberTextSize,

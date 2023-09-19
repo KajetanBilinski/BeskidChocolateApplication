@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:beskid_chcolate_app/models/Field.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 class UtilsJson {
@@ -64,6 +65,26 @@ class UtilsJson {
 
   //====================================
 
+  //=========== PRESENTATION MAIN ==============
+
+  //  ASSETS
+  //    images
+  static List<String>? PMImageButtons;
+
+  //  TEXT
+  //    titles
+  static List<String>? PMTextButtonTitles;
+  static String? PMTextTitle;
+
+  //====================================
+
+  //=========== PRESENTATION PAGE ==============
+
+  //  FIELDS
+  static List<List<Field?>?>? PPPageFields;
+
+  //====================================
+
 
   UtilsJson._();
 
@@ -107,5 +128,30 @@ class UtilsJson {
     AUWebsiteFacebook=jsonData["ABOUTUS"]["WEBSITE"]["AUWebsiteFacebook"];
     AUWebsiteYoutube=jsonData["ABOUTUS"]["WEBSITE"]["AUWebsiteYoutube"];
     AUWebsiteWebsite=jsonData["ABOUTUS"]["WEBSITE"]["AUWebsiteWebsite"];
+
+    PMTextTitle=jsonData["PRESENTATIONMAIN"]["TEXT"]["TITLES"]["PMTextTitle"];
+    PMImageButtons=List<String>.from(jsonData["PRESENTATIONMAIN"]["ASSETS"]["IMAGES"]["PMImageButtons"]);
+    PMTextButtonTitles=List<String>.from(jsonData["PRESENTATIONMAIN"]["TEXT"]["TITLES"]["PMTextButtonTitles"]);
+
+    List<dynamic> dynamicList = jsonData["PRESENTATIONPAGE"];
+    PPPageFields = dynamicList.map((dynamic sublist) {
+      if (sublist is List) {
+        return sublist.map((dynamic item) {
+          if (item is Map<String, dynamic>) {
+            return Field(
+              item["Type"],
+              item["Content"]
+            );
+          }
+          return null;
+        }).toList();
+      }
+      return null;
+    }).cast<List<Field?>?>().toList();
+    if(PMImageButtons!=null && PMTextButtonTitles != null) {
+      if(PMImageButtons!.length != PMTextButtonTitles!.length){
+        throw Exception("JSON IS IN WRONG FORMAT ! Check PRESENTATION MAIN section");
+      }
+    }
   }
 }

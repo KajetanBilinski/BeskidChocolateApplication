@@ -61,7 +61,55 @@
         "AUWebsiteYoutube": "https://beskidchocolate.pl/",
         "AUWebsiteWebsite": "https://beskidchocolate.pl/"
     }
-  }
+  },
+  "PRESENTATIONMAIN":
+  {
+    "ASSETS":{
+      "IMAGES":
+      {
+        "PMImageButtons": [
+        "assets/images/presentation_main_page/sample.png",
+        "assets/images/presentation_main_page/sample.png",
+        "assets/images/presentation_main_page/sample.png",
+        "assets/images/presentation_main_page/sample.png",
+        "assets/images/presentation_main_page/sample.png"
+        ]
+      }
+    },
+    "TEXT":{
+      "TITLES":{
+        "PMTextTitle": "Zwiedzanie",
+        "PMTextButtonTitles": [
+          "CO TO ZNACZY BEAN TO BAR?",
+          "CZY CZEKOLADA TO SAŁATKA?",
+          "CZY CZEKOLADA TO SAŁATKA?",
+          "CZY CZEKOLADA TO SAŁATKA?",
+          "CZY CZEKOLADA TO SAŁATKA?"
+        ]
+      }
+    }
+  },
+  "PRESENTATIONPAGE":
+  [
+    [
+      {
+        "Type": "title",
+        "Content": "Co to znaczy BEAN TO BAR"
+      },
+      {
+        "Type": "text",
+        "Content": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"
+      },
+      {
+        "Type": "image",
+        "Content": "assets/images/presentation_main_page/sample.png"
+      },
+      {
+        "Type": "text",
+        "Content": "LoremIpsum"
+      }
+    ]
+  ]
 }
 
 

@@ -1,5 +1,6 @@
 import 'package:beskid_chcolate_app/pages/home_page.dart';
 import 'package:beskid_chcolate_app/utils/GlobalVariables.dart';
+import 'package:beskid_chcolate_app/utils/UtilsJson.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 class AboutUs extends StatelessWidget {
@@ -59,7 +60,7 @@ class AboutUs extends StatelessWidget {
                                 children: [
                                   SizedBox(width: GlobalVariables.spaceIconTextAboutUs),
                                   Text(
-                                      'Beskidzki Festiwal Czekolady',
+                                      UtilsJson.AUTextTitle1!,
                                       style: TextStyle(
                                         fontSize: GlobalVariables.fontSizeTitleAboutUs,
                                         fontFamily: 'Lato',
@@ -72,21 +73,21 @@ class AboutUs extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 RowNoteCreate(
-                                    'assets/icons/about_us_page/kalendarz.png',
-                                    '07.09 - 08.09 Sobota - Niedziela',
+                                    UtilsJson.AULogoCalendar!,
+                                    UtilsJson.AUTextRow1Calendar!,
                                     true
                                 ),
                                 SizedBox(height: GlobalVariables.spaceTextAboutUs),
                                 RowNoteCreate(
-                                    'assets/icons/about_us_page/zegar.png',
-                                    '10:00 - 18:00',
+                                    UtilsJson.AULogoClock!,
+                                    UtilsJson.AUTextRow1Clock!,
                                     true
 
                                 ),
                                 SizedBox(height: GlobalVariables.spaceTextAboutUs),
                                 RowNoteCreate(
-                                    'assets/icons/about_us_page/pinezka.png',
-                                    'Manufaktura Beskid Chocolate\nHala Widowiskowo Sportowa',
+                                    UtilsJson.AULogoPin!,
+                                    UtilsJson.AUTextRow1Pin!,
                                     true
                                 ),
                               ],
@@ -108,7 +109,7 @@ class AboutUs extends StatelessWidget {
                                     backgroundColor: Color.fromRGBO(238, 148, 91, 1.0)
                                 ),
                                 child: Text(
-                                  'więcej informacji',
+                                  UtilsJson.AUButtonText!,
                                   style: TextStyle(
                                       fontSize:
                                       GlobalVariables.fontSizeButtonAboutUs),
@@ -127,7 +128,7 @@ class AboutUs extends StatelessWidget {
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     children: [
                                       Text(
-                                          'Manufaktura Beskid Chocolate',
+                                          UtilsJson.AUTextTitle2!,
                                           style: TextStyle(
                                             fontSize: GlobalVariables.fontSizeTitleAboutUs,
                                             fontFamily: 'Lato',
@@ -138,26 +139,26 @@ class AboutUs extends StatelessWidget {
                                 ),
                                 SizedBox(height: GlobalVariables.spaceIconTextAboutUs),
                                 RowNoteCreate(
-                                    'assets/icons/about_us_page/zegar.png',
-                                    '8:00 - 16:00 PN - PT\n10:00 - 14:00 SOB',
+                                    UtilsJson.AULogoClock!,
+                                    UtilsJson.AUTextRow2Clock!,
                                     false
                                 ),
                                 SizedBox(height: GlobalVariables.spaceTextAboutUs),
                                 RowNoteCreate(
-                                    'assets/icons/about_us_page/telefon.png',
-                                    '+ 48 123 456 789',
+                                    UtilsJson.AULogoTelephone!,
+                                    UtilsJson.AUTextRow2Telephone!,
                                     false
                                 ),
                                 SizedBox(height: GlobalVariables.spaceTextAboutUs),
                                 RowNoteCreate(
-                                    'assets/icons/about_us_page/poczta.png',
-                                    'biuro@beskidchocolate.pl',
+                                    UtilsJson.AULogoEmail!,
+                                    UtilsJson.AUTextRow2Email!,
                                     false
                                 ),
                                 SizedBox(height: GlobalVariables.spaceTextAboutUs),
                                 RowNoteCreate(
-                                    'assets/icons/about_us_page/pinezka.png',
-                                    'ul. 3 Maja 28, Węgierska Górka 34-300',
+                                    UtilsJson.AULogoPin!,
+                                    UtilsJson.AUTextRow2Pin!,
                                     false
                                 ),
 
@@ -165,7 +166,7 @@ class AboutUs extends StatelessWidget {
                          )
                       ),
                       SizedBox(height: GlobalVariables.spaceNote2HeightAboutUs),
-                      Text('znajdź nas na:',
+                      Text(UtilsJson.AUTextTitle3!,
                       style: TextStyle(
                         fontFamily: 'Lato',
                         fontSize: GlobalVariables.fontSizeTextAboutUs,
@@ -180,10 +181,10 @@ class AboutUs extends StatelessWidget {
                         children: [
                           InkWell(
                             onTap: () {
-
+                              _launchWebsite(UtilsJson.AUWebsiteInstagram!);
                             },
                             child: Image.asset(
-                              'assets/icons/about_us_page/insta.png',
+                              UtilsJson.AULogoInstagram!,
                               width: GlobalVariables.icon2SizeAboutUs,
                               height: GlobalVariables.icon2SizeAboutUs,
                             ),
@@ -191,10 +192,10 @@ class AboutUs extends StatelessWidget {
                           SizedBox(width: GlobalVariables.spaceIconIconAboutUs),
                           InkWell(
                             onTap: () {
-                              _launchWebsite('https://beskidchocolate.pl');
+                              _launchWebsite(UtilsJson.AUWebsiteFacebook!);
                             },
                             child: Image.asset(
-                              'assets/icons/about_us_page/facebook.png',
+                              UtilsJson.AULogoFacebook!,
                               width: GlobalVariables.icon2SizeAboutUs,
                               height: GlobalVariables.icon2SizeAboutUs,
                             ),
@@ -202,10 +203,10 @@ class AboutUs extends StatelessWidget {
                           SizedBox(width: GlobalVariables.spaceIconIconAboutUs),
                           InkWell(
                             onTap: () {
-                              _launchWebsite('https://beskidchocolate.pl');
+                              _launchWebsite(UtilsJson.AUWebsiteYoutube!);
                             },
                             child: Image.asset(
-                              'assets/icons/about_us_page/yt.png',
+                              UtilsJson.AULogoYoutube!,
                               width: GlobalVariables.icon2SizeAboutUs,
                               height: GlobalVariables.icon2SizeAboutUs,
                             ),
@@ -213,10 +214,10 @@ class AboutUs extends StatelessWidget {
                           SizedBox(width: GlobalVariables.spaceIconIconAboutUs),
                           InkWell(
                             onTap: () {
-                              _launchWebsite('https://beskidchocolate.pl');
+                              _launchWebsite(UtilsJson.AUWebsiteWebsite!);
                             },
                             child: Image.asset(
-                              'assets/icons/about_us_page/web.png',
+                              UtilsJson.AULogoWebsite!,
                               width: GlobalVariables.icon2SizeAboutUs,
                               height: GlobalVariables.icon2SizeAboutUs,
                             ),

@@ -33,6 +33,7 @@ class UtilsJson {
   static String? AULogoCalendar;
   static String? AULogoClock;
   static String? AULogoPin;
+  static String? AULogoTelephone;
   static String? AULogoEmail;
   static String? AULogoInstagram;
   static String? AULogoFacebook;
@@ -81,5 +82,30 @@ class UtilsJson {
     HPButtonText3=jsonData["HOMEPAGE"]["TEXT"]["BUTTONS"]["HPButtonText3"];
     HPButtonText4=jsonData["HOMEPAGE"]["TEXT"]["BUTTONS"]["HPButtonText4"];
     HPWebsiteWebsite=jsonData["HOMEPAGE"]["WEBSITE"]["HPWebsiteWebsite"];
+
+    AULogoCalendar=jsonData["ABOUTUS"]["ASSETS"]["ICONS"]["AULogoCalendar"];
+    AULogoClock=jsonData["ABOUTUS"]["ASSETS"]["ICONS"]["AULogoClock"];
+    AULogoPin=jsonData["ABOUTUS"]["ASSETS"]["ICONS"]["AULogoPin"];
+    AULogoTelephone=jsonData["ABOUTUS"]["ASSETS"]["ICONS"]["AULogoTelephone"];
+    AULogoEmail=jsonData["ABOUTUS"]["ASSETS"]["ICONS"]["AULogoEmail"];
+    AULogoInstagram=jsonData["ABOUTUS"]["ASSETS"]["ICONS"]["AULogoInstagram"];
+    AULogoFacebook=jsonData["ABOUTUS"]["ASSETS"]["ICONS"]["AULogoFacebook"];
+    AULogoYoutube=jsonData["ABOUTUS"]["ASSETS"]["ICONS"]["AULogoYoutube"];
+    AULogoWebsite=jsonData["ABOUTUS"]["ASSETS"]["ICONS"]["AULogoWebsite"];
+    AUTextTitle1=jsonData["ABOUTUS"]["TEXT"]["TITLES"]["AUTextTitle1"];
+    AUTextTitle2=jsonData["ABOUTUS"]["TEXT"]["TITLES"]["AUTextTitle2"];
+    AUTextTitle3=jsonData["ABOUTUS"]["TEXT"]["TITLES"]["AUTextTitle3"];
+    AUTextRow1Calendar=jsonData["ABOUTUS"]["TEXT"]["ROWS"]["AUTextRow1Calendar"];
+    AUTextRow1Clock=jsonData["ABOUTUS"]["TEXT"]["ROWS"]["AUTextRow1Clock"];
+    AUTextRow1Pin=jsonData["ABOUTUS"]["TEXT"]["ROWS"]["AUTextRow1Pin"];
+    AUTextRow2Clock=jsonData["ABOUTUS"]["TEXT"]["ROWS"]["AUTextRow2Clock"];
+    AUTextRow2Telephone=jsonData["ABOUTUS"]["TEXT"]["ROWS"]["AUTextRow2Telephone"];
+    AUTextRow2Email=jsonData["ABOUTUS"]["TEXT"]["ROWS"]["AUTextRow2Email"];
+    AUTextRow2Pin=jsonData["ABOUTUS"]["TEXT"]["ROWS"]["AUTextRow2Pin"];
+    AUButtonText=jsonData["ABOUTUS"]["TEXT"]["BUTTONS"]["AUButtonText"];
+    AUWebsiteInstagram=jsonData["ABOUTUS"]["WEBSITE"]["AUWebsiteInstagram"];
+    AUWebsiteFacebook=jsonData["ABOUTUS"]["WEBSITE"]["AUWebsiteFacebook"];
+    AUWebsiteYoutube=jsonData["ABOUTUS"]["WEBSITE"]["AUWebsiteYoutube"];
+    AUWebsiteWebsite=jsonData["ABOUTUS"]["WEBSITE"]["AUWebsiteWebsite"];
   }
 }

@@ -1,5 +1,69 @@
 {
-  "title": "Beskid Chocolate",
-  "description": "rzemieślnicza manufaktura czekolady",
-  "content": "Twój tekst na białym tle rzemieślnicza manufaktura czekolady Twój tekst na białym tle rzemieślnicza manufaktura czekolady Twój tekst na białym tle rzemieślnicza manufaktura czekolady"
+  "HOMEPAGE": {
+    "ASSETS": {
+      "BACKGROUND":
+      {
+        "HPBackgroundPhotos": ["assets/images/home_page/background_1.jpg", "assets/images/home_page/background_2.png"]
+      },
+      "LOGOS":
+      {
+        "HPLogoPath": "assets/icons/home_page/logo.png"
+      }
+    },
+    "TEXT": {
+      "BUTTONS": {
+        "HPButtonText1": "O nas",
+        "HPButtonText2": "Informacje",
+        "HPButtonText3": "Zwiedzanie",
+        "HPButtonText4": "Oceń aplikacje"
+      }
+    },
+    "WEBSITE": {
+        "HPWebsiteWebsite": "https://beskidchocolate.pl"
+    }
+  },
+  "ABOUTUS": {
+    "ASSETS": {
+      "ICONS": {
+        "AULogoCalendar": "",
+        "AULogoClock": "",
+        "AULogoPin": "",
+        "AULogoEmail": "",
+        "AULogoInstagram": "",
+        "AULogoFacebook": "",
+        "AULogoYoutube": "",
+        "AULogoWebsite": ""
+      }
+    },
+    "TEXT": {
+      "TITLES": {
+        "AUTextTitle1": "",
+        "AUTextTitle2": "",
+        "AUTextTitle3": ""
+      },
+      "ROWS": {
+        "AUTextRow1Calendar": "",
+        "AUTextRow1Clock": "",
+        "AUTextRow1Pin": "",
+        "AUTextRow2Clock": "",
+        "AUTextRow2Telephone": "",
+        "AUTextRow2Email": "",
+        "AUTextRow2Pin": ""
+      },
+      "BUTTONS": {
+        "AUButtonText": ""
+      }
+    },
+    "WEBSITE": {
+        "AUWebsiteInstagram": "",
+        "AUWebsiteFacebook": "",
+        "AUWebsiteYoutube": "",
+        "AUWebsiteWebsite": ""
+    }
+  }
 }
+
+
+
+
+

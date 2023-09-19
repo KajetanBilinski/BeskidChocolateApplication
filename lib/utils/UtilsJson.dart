@@ -1,27 +1,85 @@
 import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
 
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+class UtilsJson {
+  static UtilsJson? _instance;
 
-class CustomLocalization {
-  Map<String, dynamic>? _localizedStrings;
+  //=========== HOME PAGE ==============
 
-  Future<void> load() async {
-    // Load the JSON file containing your localized strings
-    final String jsonString = await rootBundle.loadString('assets/text/text.json');
-    final Map<String, dynamic> jsonMap = json.decode(jsonString);
+  //  ASSETS
+  //    background
+  static List<String>? HPBackgroundPhotos;
+  //    logos
+  static String? HPLogoPath;
 
-    // Store the JSON data in a map
-    _localizedStrings = jsonMap;
+  //  TEXT
+  //    buttons
+  static String? HPButtonText1;
+  static String? HPButtonText2;
+  static String? HPButtonText3;
+  static String? HPButtonText4;
+
+  //  WEBSITE
+  //    websites
+  static String? HPWebsiteWebsite;
+
+  //====================================
+
+
+  //=========== ABOUT US ==============
+
+  //  ASSETS
+  //    icons
+  static String? AULogoCalendar;
+  static String? AULogoClock;
+  static String? AULogoPin;
+  static String? AULogoEmail;
+  static String? AULogoInstagram;
+  static String? AULogoFacebook;
+  static String? AULogoYoutube;
+  static String? AULogoWebsite;
+
+  //  TEXT
+  //    titles
+  static String? AUTextTitle1;
+  static String? AUTextTitle2;
+  static String? AUTextTitle3;
+  //    rows
+  static String? AUTextRow1Calendar;
+  static String? AUTextRow1Clock;
+  static String? AUTextRow1Pin;
+  static String? AUTextRow2Clock;
+  static String? AUTextRow2Telephone;
+  static String? AUTextRow2Email;
+  static String? AUTextRow2Pin;
+  //    buttons
+  static String? AUButtonText;
+  //  WEBSITE
+  //    websites
+  static String? AUWebsiteInstagram;
+  static String? AUWebsiteFacebook;
+  static String? AUWebsiteYoutube;
+  static String? AUWebsiteWebsite;
+
+  //====================================
+
+
+  UtilsJson._();
+
+  static UtilsJson getInstance() {
+    _instance ??= UtilsJson._();
+    return _instance!;
   }
 
-  // Define methods to access the localized strings
-  String? get title => _localizedStrings?['title'];
-  String? get description => _localizedStrings?['description'];
-  String? get content => _localizedStrings?['content'];
-
-  // Create a method to retrieve the localization instance
-  static CustomLocalization of(BuildContext context) {
-    return Localizations.of<CustomLocalization>(context, CustomLocalization)!;
+  static Future<void> readJsonData() async {
+    final String jsonString = await rootBundle.loadString('assets/text/text.json');
+    final Map<String, dynamic> jsonData = json.decode(jsonString);
+    HPBackgroundPhotos=List<String>.from(jsonData["HOMEPAGE"]["ASSETS"]["BACKGROUND"]["HPBackgroundPhotos"]);
+    HPLogoPath=jsonData["HOMEPAGE"]["ASSETS"]["LOGOS"]["HPLogoPath"];
+    HPButtonText1=jsonData["HOMEPAGE"]["TEXT"]["BUTTONS"]["HPButtonText1"];
+    HPButtonText2=jsonData["HOMEPAGE"]["TEXT"]["BUTTONS"]["HPButtonText2"];
+    HPButtonText3=jsonData["HOMEPAGE"]["TEXT"]["BUTTONS"]["HPButtonText3"];
+    HPButtonText4=jsonData["HOMEPAGE"]["TEXT"]["BUTTONS"]["HPButtonText4"];
+    HPWebsiteWebsite=jsonData["HOMEPAGE"]["WEBSITE"]["HPWebsiteWebsite"];
   }
 }

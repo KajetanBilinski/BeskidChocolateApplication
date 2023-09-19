@@ -1,10 +1,31 @@
 import 'package:beskid_chcolate_app/pages/home_page.dart';
 import 'package:beskid_chcolate_app/utils/GlobalVariables.dart';
+import 'package:beskid_chcolate_app/utils/UtilsJson.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  UtilsJson.readJsonData().then((_) {
+    runApp(MyApp());
+  });
 }
+
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    initializeGlobalValues(context);
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Beskid Chocolate App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: HomePage()
+    );
+  }
+}
+
 void initializeGlobalValues(BuildContext context)
 {
   GlobalVariables.fontSizeButtonHomePage = MediaQuery.of(context).size.height * 0.03;
@@ -34,18 +55,4 @@ void initializeGlobalValues(BuildContext context)
   GlobalVariables.spaceIconIconAboutUs  = MediaQuery.of(context).size.width * 0.1;
   GlobalVariables.spaceBackIconHeightAboutUs  = MediaQuery.of(context).size.height * 0.07;
   GlobalVariables.spaceBackIconWidthAboutUs  = MediaQuery.of(context).size.width * 0.04;
-}
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    initializeGlobalValues(context);
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Beskid Chocolate App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomePage()
-    );
-  }
 }

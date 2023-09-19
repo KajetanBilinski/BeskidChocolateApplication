@@ -71,74 +71,23 @@ class AboutUs extends StatelessWidget {
                             Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Row(
-                                  children: [
-                                    SizedBox(width: GlobalVariables.spaceIconTextAboutUs),
-                                    Container(
-                                      width: GlobalVariables.iconSizeAboutUs,
-                                      height: GlobalVariables.iconSizeAboutUs,
-                                      child: Image.asset(
-                                        'assets/icons/about_us_page/kalendarz.png',
-                                        fit: BoxFit.contain,
-                                      ),
-                                    ),
-                                    SizedBox(width: GlobalVariables.spaceIconTextAboutUs),
-                                    Text(
-                                      '07.09 - 08.09 Sobota - Niedziela',
-                                      style: TextStyle(
-                                          fontSize:
-                                          GlobalVariables.fontSizeTextAboutUs,
-                                          fontFamily: 'Lato'),
-                                    ),
-                                  ],
+                                RowNoteCreate(
+                                    'assets/icons/about_us_page/kalendarz.png',
+                                    '07.09 - 08.09 Sobota - Niedziela',
+                                    true
                                 ),
                                 SizedBox(height: GlobalVariables.spaceTextAboutUs),
-                                Row(
-                                  children: [
-                                    SizedBox(width: GlobalVariables.spaceIconTextAboutUs),
-                                    Container(
-                                      width: GlobalVariables.iconSizeAboutUs,
-                                      height: GlobalVariables.iconSizeAboutUs,
-                                      child: Image.asset(
-                                        'assets/icons/about_us_page/zegar.png',
-                                        fit: BoxFit.contain,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                        width:
-                                        GlobalVariables.spaceIconTextAboutUs),
-                                    Text(
-                                      '10:00 - 18:00',
-                                      style: TextStyle(
-                                          fontSize:
-                                          GlobalVariables.fontSizeTextAboutUs,
-                                          fontFamily: 'Lato'),
-                                    ),
-                                  ],
+                                RowNoteCreate(
+                                    'assets/icons/about_us_page/zegar.png',
+                                    '10:00 - 18:00',
+                                    true
+
                                 ),
                                 SizedBox(height: GlobalVariables.spaceTextAboutUs),
-                                Row(
-                                  children: [
-                                    SizedBox(width: GlobalVariables.spaceIconTextAboutUs),
-                                    Container(
-                                      width: GlobalVariables.iconSizeAboutUs,
-                                      height: GlobalVariables.iconSizeAboutUs,
-                                      child: Image.asset(
-                                        'assets/icons/about_us_page/pinezka.png',
-                                        fit: BoxFit.contain,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                        width:
-                                        GlobalVariables.spaceIconTextAboutUs),
-                                    Text(
-                                      'Manufaktura Beskid Chocolate\nHala Widowiskowo Sportowa',
-                                      style: TextStyle(
-                                          fontSize:
-                                          GlobalVariables.fontSizeTextAboutUs,
-                                          fontFamily: 'Lato'),
-                                    ),
-                                  ],
+                                RowNoteCreate(
+                                    'assets/icons/about_us_page/pinezka.png',
+                                    'Manufaktura Beskid Chocolate\nHala Widowiskowo Sportowa',
+                                    true
                                 ),
                               ],
                             ),
@@ -188,97 +137,30 @@ class AboutUs extends StatelessWidget {
                                       )]
                                 ),
                                 SizedBox(height: GlobalVariables.spaceIconTextAboutUs),
-                                Row(
+                                RowNoteCreate(
+                                    'assets/icons/about_us_page/zegar.png',
+                                    '8:00 - 16:00 PN - PT\n10:00 - 14:00 SOB',
+                                    false
+                                ),
+                                SizedBox(height: GlobalVariables.spaceTextAboutUs),
+                                RowNoteCreate(
+                                    'assets/icons/about_us_page/telefon.png',
+                                    '+ 48 123 456 789',
+                                    false
+                                ),
+                                SizedBox(height: GlobalVariables.spaceTextAboutUs),
+                                RowNoteCreate(
+                                    'assets/icons/about_us_page/poczta.png',
+                                    'biuro@beskidchocolate.pl',
+                                    false
+                                ),
+                                SizedBox(height: GlobalVariables.spaceTextAboutUs),
+                                RowNoteCreate(
+                                    'assets/icons/about_us_page/pinezka.png',
+                                    'ul. 3 Maja 28, Węgierska Górka 34-300',
+                                    false
+                                ),
 
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      width: GlobalVariables.iconSizeAboutUs,
-                                      height: GlobalVariables.iconSizeAboutUs,
-                                      child: Image.asset(
-                                        'assets/icons/about_us_page/zegar.png',
-                                        fit: BoxFit.contain,
-                                      ),
-                                    ),
-                                    SizedBox(width: GlobalVariables.spaceIconTextAboutUs),
-                                    Text(
-                                      '8:00 - 16:00 PN - PT\n10:00 - 14:00 SOB',
-                                      style: TextStyle(
-                                          fontSize: GlobalVariables.fontSizeTextAboutUs,
-                                          fontFamily: 'Lato'),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: GlobalVariables.spaceTextAboutUs),
-                                Row(
-
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      width: GlobalVariables.iconSizeAboutUs,
-                                      height: GlobalVariables.iconSizeAboutUs,
-                                      child: Image.asset(
-                                        'assets/icons/about_us_page/telefon.png',
-                                        fit: BoxFit.contain,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                        width: GlobalVariables.spaceIconTextAboutUs),
-                                    Text(
-                                      '+ 48 123 456 789',
-                                      style: TextStyle(
-                                          fontSize: GlobalVariables.fontSizeTextAboutUs,
-                                          fontFamily: 'Lato'),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: GlobalVariables.spaceTextAboutUs),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      width: GlobalVariables.iconSizeAboutUs,
-                                      height: GlobalVariables.iconSizeAboutUs,
-                                      child: Image.asset(
-                                        'assets/icons/about_us_page/poczta.png',
-                                        fit: BoxFit.contain,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                        width:
-                                        GlobalVariables.spaceIconTextAboutUs),
-                                    Text(
-                                      'biuro@beskidchocolate.pl',
-                                      style: TextStyle(fontSize:
-                                      GlobalVariables.fontSizeTextAboutUs,
-                                          fontFamily: 'Lato'),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: GlobalVariables.spaceTextAboutUs),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      width: GlobalVariables.iconSizeAboutUs,
-                                      height: GlobalVariables.iconSizeAboutUs,
-                                      child: Image.asset(
-                                        'assets/icons/about_us_page/pinezka.png',
-                                        fit: BoxFit.contain,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                        width:
-                                        GlobalVariables.spaceIconTextAboutUs),
-                                    Text(
-                                      'ul. 3 Maja 28, Węgierska Górka 34-300',
-                                      style: TextStyle(
-                                          fontSize:
-                                          GlobalVariables.fontSizeTextAboutUs,
-                                          fontFamily: 'Lato'),
-                                    ),
-                                  ],
-                                ),
                               ]
                          )
                       ),
@@ -348,6 +230,36 @@ class AboutUs extends StatelessWidget {
         )
     );
   }
+
+  Widget RowNoteCreate(
+        String iconPath,
+        String text,
+        bool width
+      )
+  {
+    return Row(
+      children: [
+        SizedBox(width: width ? GlobalVariables.spaceIconTextAboutUs : 0),
+        Container(
+          width: GlobalVariables.iconSizeAboutUs,
+          height: GlobalVariables.iconSizeAboutUs,
+          child: Image.asset(
+            iconPath,
+            fit: BoxFit.contain,
+          ),
+        ),
+        SizedBox(width: GlobalVariables.spaceIconTextAboutUs),
+        Text(
+          text,
+          style: TextStyle(
+              fontSize:
+              GlobalVariables.fontSizeTextAboutUs,
+              fontFamily: 'Lato'),
+        ),
+      ],
+    );
+  }
+
   _launchWebsite(String website) async {
     final Uri url = Uri.parse(website);
     if (!await launchUrl(url)) {

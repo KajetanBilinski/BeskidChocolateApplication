@@ -13,7 +13,7 @@ class AboutUs extends StatelessWidget {
                 children: [
 
                   Container(
-                    color: Colors.white, // Tło będzie białe
+                    color: Colors.white,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:beskid_chcolate_app/pages/presentation_main_page.dart';
+import 'package:beskid_chcolate_app/utils/UtilsJson.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'about_us_page.dart';
@@ -14,12 +15,8 @@ class HomePage extends StatefulWidget {
 }
 class _HomePageState extends State<HomePage> {
   final PageController _pageController = PageController();
-  final List<String> imagePaths = [
-    'assets/images/home_page/background_1.jpg',
-    'assets/images/home_page/background_2.png'
-  ];
+  final List<String> imagePaths = UtilsJson.HPBackgroundPhotos!;
   int currentPage = 0;
-
   @override
   void initState() {
     super.initState();
@@ -74,21 +71,19 @@ class _HomePageState extends State<HomePage> {
             children: [
 
               AspectRatio(
-                aspectRatio: 3/1, // Use the calculated aspect ratio
+                aspectRatio: 3/1,
                 child: Image.asset(
-                  'assets/icons/home_page/logo.png' // Replace with your image path
-                   // Adjust the fit property as needed
+                   UtilsJson.HPLogoPath!
                 ),
               ),
               SizedBox(height: GlobalVariables.spaceIconHomePage), // Odstęp między logo a przyciskami
               createElevatedButton(
-                  'O nas', () {
-
+                  UtilsJson.HPButtonText1!, () {
               }
               ),
               SizedBox(height: GlobalVariables.spaceButtonsHomePage),// Odstęp między przyciskami
               createElevatedButton(
-                  'Informacje', () {
+                  UtilsJson.HPButtonText2!, () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const AboutUs()),
@@ -97,7 +92,7 @@ class _HomePageState extends State<HomePage> {
               ),
               SizedBox(height: GlobalVariables.spaceButtonsHomePage),
               createElevatedButton(
-                  'Zwiedzanie', () {
+                  UtilsJson.HPButtonText3!, () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const PresentationMain()),
@@ -106,8 +101,8 @@ class _HomePageState extends State<HomePage> {
               ),
               SizedBox(height: GlobalVariables.spaceButtonsHomePage),
               createElevatedButton(
-                  'Oceń aplikacje', () {
-                    _launchWebsite('https://beskidchocolate.pl');
+                  UtilsJson.HPButtonText4!, () {
+                    _launchWebsite(UtilsJson.HPWebsiteWebsite!);
                   }
               )
             ],

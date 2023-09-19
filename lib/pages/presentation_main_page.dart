@@ -17,7 +17,7 @@ class PresentationMain extends StatelessWidget {
                         Column(
                           children: [
                             SizedBox(
-                              height: 1,
+                              height: 5,
                             ),
                             Row(
                               children: [
@@ -30,26 +30,42 @@ class PresentationMain extends StatelessWidget {
                                         MaterialPageRoute(builder: (context) => const HomePage()),
                                       );
                                     },
-                                    child: const Icon(Icons.arrow_back)
+                                    child: const Icon(Icons.arrow_back,
+                                    size: 30,)
                                 )],
                             )
 
                           ],
                         ),
-                        SizedBox(height: 80),
-                        const Text(
-                          'Zwiedzanie',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                              fontFamily: 'Lato',
-                              fontSize: 30
-                          ),
+                        SizedBox(height: 25),
+                        Column(
+                          children: [
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Row(
+                              children:
+                              [
+                                SizedBox(
+                                    width: GlobalVariables.spaceBackIconWidthAboutUs),
+                                const Text(
+                                  'Zwiedzanie',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                      fontFamily: 'Lato',
+                                      fontSize: 30
+                                  ),
+                                )
+                              ],
+                            ),
+
+                          ],
                         ),
+
 
                         Column(
                             children:
                             [
-
                               SizedBox(height: 20),
                               Container(
                                 alignment: Alignment.center,
@@ -59,20 +75,34 @@ class PresentationMain extends StatelessWidget {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     children:[
-                                      InkWell(
-                                        onTap: () {
-
-                                        },
-                                        child: ClipRRect(
-                                            borderRadius: BorderRadius.circular(20.0),
-                                            child:Image.asset(
-
-                                              'assets/images/presentation_main_page/sample.png',
-                                              width: 700,
-                                              height: 200,
-                                              fit: BoxFit.cover,
-                                            )
-                                        ),
+                                      createInkWell(
+                                          'assets/images/presentation_main_page/sample.png',
+                                          '01',
+                                          'CO TO ZNACZY BEAN TO BAR?'
+                                      ),
+                                      SizedBox(height: 15),
+                                      createInkWell(
+                                          'assets/images/presentation_main_page/sample.png',
+                                          '02',
+                                          'CZY CZEKOLADA TO SAŁATKA?'
+                                      ),
+                                      SizedBox(height: 15),
+                                      createInkWell(
+                                          'assets/images/presentation_main_page/sample.png',
+                                          '02',
+                                          'CZY CZEKOLADA TO SAŁATKA?'
+                                      ),
+                                      SizedBox(height: 15),
+                                      createInkWell(
+                                          'assets/images/presentation_main_page/sample.png',
+                                          '02',
+                                          'CZY CZEKOLADA TO SAŁATKA?'
+                                      ),
+                                      SizedBox(height: 15),
+                                      createInkWell(
+                                          'assets/images/presentation_main_page/sample.png',
+                                          '02',
+                                          'CZY CZEKOLADA TO SAŁATKA?'
                                       )
                                     ]
                                 ),
@@ -86,5 +116,60 @@ class PresentationMain extends StatelessWidget {
                 )
             )
         );
+
+  }
+  Widget createInkWell
+      (
+        String imagePath,
+        String number,
+        String text
+      )
+  {
+    return InkWell(
+      onTap: () {
+        // Obsługa kliknięcia
+      },
+      child: Stack(
+        alignment: Alignment.center,
+        children: <Widget>[
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20.0),
+            child: Image.asset(
+              imagePath,
+              width: 800,
+              height: 150,
+              fit: BoxFit.cover,
+            ),
+          ),
+          Positioned(
+            left: 10.0, // Odstęp od lewej strony
+            bottom: 10.0, // Odstęp od dolnej strony
+            child: RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: number+'\n',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 40.0,
+                      fontFamily: 'Lato'
+
+                    ),
+                  ),
+                  TextSpan(
+                    text: text.toUpperCase(),
+                    style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                        fontFamily: 'Lato'
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

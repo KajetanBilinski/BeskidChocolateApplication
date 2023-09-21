@@ -92,21 +92,49 @@
   "PRESENTATIONPAGE":
   [
     [
-      {
-        "Type": "title",
-        "Content": "Co to znaczy BEAN TO BAR"
-      },
-      {
-        "Type": "text",
-        "Content": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"
-      },
+
       {
         "Type": "image",
         "Content": "assets/images/presentation_main_page/sample.png"
       },
       {
         "Type": "text",
+        "Content": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"
+      },
+      {
+        "Type": "title",
+        "Content": "Co to znaczy BEAN TO BAR"
+      },
+      {
+        "Type": "text",
         "Content": "LoremIpsum"
+      },
+      {
+        "Type": "title",
+        "Content": "Co to znaczy BEAN TO BAR"
+      }
+    ],
+    [
+
+      {
+        "Type": "image",
+        "Content": "assets/images/presentation_main_page/sample.png"
+      },
+      {
+        "Type": "text",
+        "Content": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"
+      },
+      {
+        "Type": "title",
+        "Content": "Co to znaczy BEAN TO BAR"
+      },
+      {
+        "Type": "text",
+        "Content": "LoremIpsum"
+      },
+      {
+        "Type": "title",
+        "Content": "Co to znaczy BEAN TO BAR"
       }
     ]
   ]

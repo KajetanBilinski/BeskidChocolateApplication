@@ -244,7 +244,7 @@ class AboutUs extends StatelessWidget {
     return Row(
       children: [
         SizedBox(width: width ? GlobalVariables.spaceIconTextAboutUs : 0),
-        Container(
+        SizedBox(
           width: GlobalVariables.iconSizeAboutUs,
           height: GlobalVariables.iconSizeAboutUs,
           child: Image.asset(

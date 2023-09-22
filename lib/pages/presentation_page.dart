@@ -6,7 +6,7 @@ import '../models/Field.dart';
 class PresentationPage extends StatelessWidget {
 
   final int number;
-  PresentationPage({super.key, required this.number});
+  const PresentationPage({super.key, required this.number});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,7 +21,7 @@ class PresentationPage extends StatelessWidget {
                             if(f!.Type == 'text')
                               Text(
                                 f.Content,
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontFamily: 'Lato',
                                     fontSize: 10
                                 ),
@@ -34,13 +34,13 @@ class PresentationPage extends StatelessWidget {
                             else if(f.Type == 'title')
                               Text(
                               f.Content,
-                              style: TextStyle(
+                              style: const TextStyle(
                               fontFamily: 'Lato',
                               fontSize: 20,
                               fontWeight: FontWeight.bold
                               )
                               )
-                            ,SizedBox(height: 10)
+                            ,const SizedBox(height: 10)
                           ],
                         )
 

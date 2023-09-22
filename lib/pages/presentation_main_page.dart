@@ -18,7 +18,7 @@ class PresentationMain extends StatelessWidget {
                       children: [
                         Column(
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
                             Row(
@@ -39,10 +39,10 @@ class PresentationMain extends StatelessWidget {
 
                           ],
                         ),
-                        SizedBox(height: 25),
+                        const SizedBox(height: 25),
                         Column(
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
                             Row(
@@ -97,7 +97,7 @@ class PresentationMain extends StatelessWidget {
               children:[
                 createInkWell(
                     UtilsJson.PMImageButtons![i-1],
-                    ('0$i') as String,
+                    ('0$i'),
                     UtilsJson.PMTextButtonTitles![i-1],
                     context
                 ),

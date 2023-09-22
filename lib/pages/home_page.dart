@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
         currentPage = _pageController.page!.round();
       });
     });
-    Timer.periodic(Duration(seconds: 5), (timer) {
+    Timer.periodic(const Duration(seconds: 5), (timer) {
       if (currentPage < imagePaths.length - 1) {
         currentPage++;
       } else {
@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
       }
       _pageController.animateToPage(
         currentPage,
-        duration: Duration(seconds: 1),
+        duration: const Duration(seconds: 1),
         curve: Curves.easeInOut,
       );
     });
@@ -123,7 +123,7 @@ class _HomePageState extends State<HomePage> {
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.white,
-        side: BorderSide(color: Colors.white, width: 2.0),
+        side: const BorderSide(color: Colors.white, width: 2.0),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20.0),
         ),

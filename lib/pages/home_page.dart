@@ -143,7 +143,7 @@ class _HomePageState extends State<HomePage> {
   _launchWebsite(String website) async {
     final Uri url = Uri.parse(website);
     if (!await launchUrl(url)) {
-      throw Exception('Could not launch $url');
+      throw Exception('Nie udało połączyć się z stroną $url');
     }
   }
 }

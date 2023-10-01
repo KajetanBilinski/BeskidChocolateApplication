@@ -2,11 +2,15 @@ import 'package:beskid_chcolate_app/utils/UtilsJson.dart';
 import 'package:flutter/material.dart';
 
 import '../models/Field.dart';
+import '../utils/GlobalVariables.dart';
+import 'home_page.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+
 
 class PresentationPage extends StatelessWidget {
 
   final int number;
-  const PresentationPage({super.key, required this.number});
+  PresentationPage({super.key, required this.number});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,6 +19,30 @@ class PresentationPage extends StatelessWidget {
                 child:
                 ListView(
                     children: [
+                      Column(
+                        children: [
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                  width: GlobalVariables.spaceBackIconWidthAboutUs),
+                              InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => const HomePage()),
+                                    );
+                                  },
+                                  child: Icon(Icons.arrow_back,
+                                      size: GlobalVariables.backIconSize)
+                              )],
+                          )
+
+                        ],
+                      ),
+                      const SizedBox(height: 25),
                       for(Field? f in UtilsJson.PPPageFields![number]!)
                         Column(
                           children: [
@@ -42,7 +70,12 @@ class PresentationPage extends StatelessWidget {
                               )
                             ,const SizedBox(height: 10)
                           ],
-                        )
+
+                        ),
+                      YoutubePlayer(
+                        controller: _controller,
+                        showVideoProgressIndicator: true,
+                      ),
 
 
                     ]
@@ -51,4 +84,11 @@ class PresentationPage extends StatelessWidget {
         )
     );
   }
+  YoutubePlayerController _controller = YoutubePlayerController(
+    initialVideoId: 'MWnT_2EF86E', // Wstaw tutaj identyfikator wideo z YouTube
+    flags: YoutubePlayerFlags(
+      autoPlay: false,
+      mute: false,
+    ),
+  );
 }

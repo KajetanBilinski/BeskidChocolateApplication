@@ -85,6 +85,21 @@ class UtilsJson {
 
   //====================================
 
+  //=========== INFORMATION PAGE ==============
+
+  //  IMAGES
+  static String? IPMainImage;
+
+  //  ICONS
+  static String? IPMainIcon;
+
+  //  TEXTS
+  static String? IPTextTitleImage;
+  static String? IPTextImage;
+  static String? IPMainText;
+
+  //====================================
+
 
   UtilsJson._();
 
@@ -133,6 +148,13 @@ class UtilsJson {
     PMImageButtons=List<String>.from(jsonData["PRESENTATIONMAIN"]["ASSETS"]["IMAGES"]["PMImageButtons"]);
     PMTextButtonTitles=List<String>.from(jsonData["PRESENTATIONMAIN"]["TEXT"]["TITLES"]["PMTextButtonTitles"]);
 
+    IPTextTitleImage=jsonData["INFORMATIONPAGE"]["TEXT"]["TITLES"]["IPTextTitleImage"];
+    IPTextImage=jsonData["INFORMATIONPAGE"]["TEXT"]["CONTENT"]["IPTextImage"];
+    IPMainText=jsonData["INFORMATIONPAGE"]["TEXT"]["CONTENT"]["IPMainText"];
+    IPMainImage=jsonData["INFORMATIONPAGE"]["ASSETS"]["IMAGES"]["IPMainImage"];
+    IPMainIcon=jsonData["INFORMATIONPAGE"]["ASSETS"]["ICONS"]["IPMainIcon"];
+
+
     List<dynamic> dynamicList = jsonData["PRESENTATIONPAGE"];
     PPPageFields = dynamicList.map((dynamic sublist) {
       if (sublist is List) {
@@ -140,7 +162,8 @@ class UtilsJson {
           if (item is Map<String, dynamic>) {
             return Field(
               item["Type"],
-              item["Content"]
+              item["Content"],
+              item["Link"]
             );
           }
           return null;

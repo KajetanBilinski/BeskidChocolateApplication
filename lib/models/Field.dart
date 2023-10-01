@@ -2,7 +2,8 @@ class Field
 {
   String Type;
   String Content;
-  Field(this.Type,this.Content);
+  String? Link;
+  Field(this.Type,this.Content,this.Link);
 
 }
 

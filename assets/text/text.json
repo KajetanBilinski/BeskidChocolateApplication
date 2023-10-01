@@ -62,6 +62,26 @@
         "AUWebsiteWebsite": "https://beskidchocolate.pl/"
     }
   },
+  "INFORMATIONPAGE":
+  {
+    "ASSETS":{
+      "IMAGES": {
+        "IPMainImage": "assets/images/information_page/zdj_beskid.png"
+      },
+      "ICONS": {
+        "IPMainIcon":"assets/icons/information_page/znaczki.png"
+      }
+    },
+    "TEXT": {
+      "TITLES": {
+        "IPTextTitleImage": "BeskidChocolate"
+      },
+      "CONTENT": {
+        "IPTextImage": "rzemieślnicza manufaktura czekolady",
+        "IPMainText": "rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady rzemieślnicza manufaktura czekolady "
+      }
+    }
+  },
   "PRESENTATIONMAIN":
   {
     "ASSETS":{
@@ -99,7 +119,7 @@
       },
       {
         "Type": "text",
-        "Content": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"
+        "Content": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"
       },
       {
         "Type": "title",
@@ -112,6 +132,11 @@
       {
         "Type": "title",
         "Content": "Co to znaczy BEAN TO BAR"
+      },
+      {
+        "Type": "video",
+        "Content": "assets/images/presentation_main_page/sample.png",
+        "Link": "https://www.youtube.com/watch?v=8CY_wMYIL7U&ab_channel=ciekawehistorie"
       }
     ],
     [

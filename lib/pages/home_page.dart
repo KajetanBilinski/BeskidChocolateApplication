@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'about_us_page.dart';
 import '../utils/GlobalVariables.dart';
+import 'information_page.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -25,7 +26,7 @@ class _HomePageState extends State<HomePage> {
         currentPage = _pageController.page!.round();
       });
     });
-    Timer.periodic(const Duration(seconds: 5), (timer) {
+    Timer.periodic(const Duration(seconds: 2), (timer) {
       if (currentPage < imagePaths.length - 1) {
         currentPage++;
       } else {
@@ -33,8 +34,8 @@ class _HomePageState extends State<HomePage> {
       }
       _pageController.animateToPage(
         currentPage,
-        duration: const Duration(seconds: 1),
-        curve: Curves.easeInOut,
+        duration: const Duration(milliseconds: 1500),
+        curve: Curves.fastOutSlowIn,
       );
     });
   }
@@ -52,7 +53,7 @@ class _HomePageState extends State<HomePage> {
         body: Stack(
           children: <Widget>[
             IgnorePointer(
-              ignoring: true, // Set ignoring to true to block user interaction
+              ignoring: true,
               child: PageView.builder(
                 controller: _pageController,
                 itemCount: imagePaths.length,
@@ -79,6 +80,9 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: GlobalVariables.spaceIconHomePage), // Odstęp między logo a przyciskami
               createElevatedButton(
                   UtilsJson.HPButtonText1!, () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const InformationPage()));
               }
               ),
               SizedBox(height: GlobalVariables.spaceButtonsHomePage),// Odstęp między przyciskami
@@ -86,8 +90,7 @@ class _HomePageState extends State<HomePage> {
                   UtilsJson.HPButtonText2!, () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const AboutUs()),
-                );
+                  MaterialPageRoute(builder: (context) => const AboutUs()));
               }
               ),
               SizedBox(height: GlobalVariables.spaceButtonsHomePage),

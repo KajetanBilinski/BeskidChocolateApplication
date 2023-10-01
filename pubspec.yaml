@@ -47,7 +47,7 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
   url_launcher: ^6.0.6
-  youtube_player_flutter: ^8.1.2
+  webview_flutter: ^2.0.13
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -68,8 +68,10 @@ flutter:
     - assets/images/
     - assets/images/home_page/
     - assets/images/presentation_main_page/
+    - assets/images/information_page/
     - assets/icons/home_page/
     - assets/icons/about_us_page/
+    - assets/icons/information_page/
     - assets/text/
 
   # An image asset can refer to one or more resolution-specific "variants", see

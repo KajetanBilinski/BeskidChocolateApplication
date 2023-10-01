@@ -1,16 +1,17 @@
+import 'package:beskid_chcolate_app/pages/presentation_main_page.dart';
 import 'package:beskid_chcolate_app/utils/UtilsJson.dart';
 import 'package:flutter/material.dart';
 
 import '../models/Field.dart';
+import '../utils/GlobalComponents.dart';
 import '../utils/GlobalVariables.dart';
 import 'home_page.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 
 class PresentationPage extends StatelessWidget {
 
   final int number;
-  PresentationPage({super.key, required this.number});
+  const PresentationPage({super.key, required this.number});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,30 +19,9 @@ class PresentationPage extends StatelessWidget {
             body: Center(
                 child:
                 ListView(
+                    padding: EdgeInsets.zero,
                     children: [
-                      Column(
-                        children: [
-                          const SizedBox(
-                            height: 5,
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                  width: GlobalVariables.spaceBackIconWidthAboutUs),
-                              InkWell(
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => const HomePage()),
-                                    );
-                                  },
-                                  child: Icon(Icons.arrow_back,
-                                      size: GlobalVariables.backIconSize)
-                              )],
-                          )
-
-                        ],
-                      ),
+                      GlobalComponents.backArrow(context,PresentationMain(),true,false),
                       const SizedBox(height: 25),
                       for(Field? f in UtilsJson.PPPageFields![number]!)
                         Column(
@@ -56,26 +36,33 @@ class PresentationPage extends StatelessWidget {
                               )
                             else if(f.Type == 'image')
                               Image.asset(
-                                f.Content,
-                                fit: BoxFit.cover
+                                  f.Content,
+                                  fit: BoxFit.cover
                               )
                             else if(f.Type == 'title')
-                              Text(
-                              f.Content,
-                              style: const TextStyle(
-                              fontFamily: 'Lato',
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold
-                              )
-                              )
-                            ,const SizedBox(height: 10)
+                                Text(
+                                    f.Content,
+                                    style: const TextStyle(
+                                        fontFamily: 'Lato',
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold
+                                    )
+                                )
+                              else if(f.Type == 'video')
+                                  InkWell(
+                                    onTap: () {
+                                      _launchWebsite(f.Link.toString());
+                                    },
+                                    child:
+                                    Image.asset(
+                                        f.Content,
+                                        fit: BoxFit.cover
+                                    ),
+                                  ),
+                            const SizedBox(height: 10)
                           ],
 
-                        ),
-                      YoutubePlayer(
-                        controller: _controller,
-                        showVideoProgressIndicator: true,
-                      ),
+                        )
 
 
                     ]
@@ -83,12 +70,13 @@ class PresentationPage extends StatelessWidget {
             )
         )
     );
+
   }
-  YoutubePlayerController _controller = YoutubePlayerController(
-    initialVideoId: 'MWnT_2EF86E', // Wstaw tutaj identyfikator wideo z YouTube
-    flags: YoutubePlayerFlags(
-      autoPlay: false,
-      mute: false,
-    ),
-  );
+  _launchWebsite(String website) async {
+    final Uri url = Uri.parse(website);
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
+    }
+  }
+
 }

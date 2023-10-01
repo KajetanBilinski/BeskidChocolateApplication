@@ -3,6 +3,7 @@ import 'package:beskid_chcolate_app/pages/presentation_page.dart';
 import 'package:beskid_chcolate_app/utils/UtilsJson.dart';
 import 'package:flutter/material.dart';
 
+import '../utils/GlobalComponents.dart';
 import '../utils/GlobalVariables.dart';
 import 'home_page.dart';
 
@@ -15,30 +16,9 @@ class PresentationMain extends StatelessWidget {
             body: Center(
                 child:
                     ListView(
+                      padding: EdgeInsets.zero,
                       children: [
-                        Column(
-                          children: [
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            Row(
-                              children: [
-                                SizedBox(
-                                    width: GlobalVariables.spaceBackIconWidthAboutUs),
-                                InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => const HomePage()),
-                                      );
-                                    },
-                                    child: Icon(Icons.arrow_back,
-                                    size: GlobalVariables.backIconSize)
-                                )],
-                            )
-
-                          ],
-                        ),
+                        GlobalComponents.backArrow(context,HomePage(),true,false),
                         const SizedBox(height: 25),
                         Column(
                           children: [

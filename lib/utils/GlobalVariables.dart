@@ -39,8 +39,18 @@ class GlobalVariables {
   static double presentationTitleTextSize=0.0;
   static double presentationSpaceTitle=0.0;
 
-
-
+  static double informationImageWidth=0.0;
+  static double informationImageHeight=0.0;
+  static double informationSpaceTextLeft=0.0;
+  static double informationSpaceTextDown=0.0;
+  static double informationImageTextSize=0.0;
+  static double informationImageTitleSize=0.0;
+  static double informationContentTextSize=0.0;
+  static double informationSpaceImage=0.0;
+  static double informationSpaceIcon=0.0;
+  static double informationSpaceRow=0.0;
+  static double informationIconWidth=0.0;
+  static double informationIconHeight=0.0;
 
 
 }

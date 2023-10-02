@@ -16,76 +16,82 @@ class PresentationPage extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
             body:
-                Stack(
-                  children: [
-                   ListView(
-                        padding: EdgeInsets.zero,
-                        children: [
-                          GlobalComponents.backArrow(context,PresentationMain(),true,false),
-                          const SizedBox(height: 25),
-                          for(Field? f in UtilsJson.PPPageFields![number]!)
-                            Column(
-                              children: [
-                                if(f!.Type == 'text')
-                                  Padding(
-                                    padding: EdgeInsets.symmetric(horizontal: 16.0),
-                                    child: Text(
-                                      f.Content,
-                                      style: const TextStyle(
-                                        fontFamily: 'Lato',
-                                        fontSize: 13,
-                                      ),
-                                    ),
-                                  )
-                                else if(f.Type == 'image')
-                                  Image.asset(
-                                      f.Content,
-                                      fit: BoxFit.cover
-                                  )
-                                else if(f.Type == 'title')
+            Stack(
+              children: [
+                ListView(
+                    padding: EdgeInsets.zero,
+                    children: [
+                      GlobalComponents.backArrow(context,PresentationMain(),true,false),
+                      SizedBox(height: GlobalVariables.presentationPageSpaceArrowBack),
+                      for(Field? f in UtilsJson.PPPageFields![number]!)
+                        Column(
+                          children: [
+                            if(f!.Type == 'text')
+                              Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                                child: Text(
+                                  f.Content,
+                                  style: TextStyle(
+                                    fontFamily: 'Lato',
+                                    fontSize: GlobalVariables.presentationPageTextSize,
+                                  ),
+                                ),
+                              )
+                            else if(f.Type == 'image')
+                              Image.asset(
+                                  f.Content,
+                                  fit: BoxFit.cover
+                              )
+                            else if(f.Type == 'title')
+                                Column(
+                                  children: [
                                     Padding(
-                                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                                        padding: EdgeInsets.symmetric(horizontal: 16.0),
                                         child: Text(
                                             f.Content,
-                                            style: const TextStyle(
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
                                                 fontFamily: 'Lato',
-                                                fontSize: 20,
+                                                fontSize: GlobalVariables.presentationPageTitleSize,
                                                 fontWeight: FontWeight.bold
                                             )
                                         )
-                                    )
+                                    ),
+                                    SizedBox(height: GlobalVariables.presentationPageSpaceComponents/2)
+                                  ],
+                                )
 
-                                  else if(f.Type == 'video')
-                                      InkWell(
-                                        onTap: () {
-                                          _launchWebsite(f.Link.toString());
-                                        },
-                                        child:
-                                        Image.asset(
-                                            f.Content,
-                                            fit: BoxFit.cover
-                                        ),
-                                      ),
-                                const SizedBox(height: 10)
-                              ],
+                              else if(f.Type == 'video')
+                                  InkWell(
+                                    onTap: () {
+                                      _launchWebsite(f.Link.toString());
+                                    },
+                                    child:
+                                    Image.asset(
+                                        f.Content,
+                                        fit: BoxFit.cover
+                                    ),
+                                  ),
+                            SizedBox(height: GlobalVariables.presentationPageSpaceComponents)
+                          ],
 
-                            ),
-                          const SizedBox(height: 40)
+                        ),
+                      SizedBox(height: GlobalVariables.presentationPageBottomBarSize)
 
 
-                        ]
-                    ),
-                    Positioned(
-                      bottom: 0,
-                      left: 0,
-                      right: 0,
-                      child: Container(
-                        color: Colors.white,
-                        height: 50,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            if(number!=0)
+                    ]
+                ),
+                Positioned(
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  child: Container(
+                      color: Colors.white,
+                      height: 50,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          if(number!=0)
                             InkWell(
                               onTap: () {
                                 int nextPage = number;
@@ -101,9 +107,9 @@ class PresentationPage extends StatelessWidget {
                                 ),
                               ),
                             )
-                            else
-                              SizedBox(width: 30),
-                            if(number!=GlobalVariables.maxPages-1)
+                          else
+                            SizedBox(width: 30),
+                          if(number!=GlobalVariables.maxPages-1)
                             InkWell(
                               onTap: () {
                                 int nextPage = number;
@@ -119,15 +125,15 @@ class PresentationPage extends StatelessWidget {
                                 ),
                               ),
                             )
-                            else
-                              SizedBox(width: 30),
+                          else
+                            SizedBox(width: 30),
 
-                          ],
-                        )
-                        ),
-                      ),
-                  ],
-                )
+                        ],
+                      )
+                  ),
+                ),
+              ],
+            )
 
         )
 

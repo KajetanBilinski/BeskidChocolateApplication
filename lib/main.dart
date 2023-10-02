@@ -70,10 +70,11 @@ void initializeGlobalValues(BuildContext context)
   GlobalVariables.presentationNumberTextSize  = MediaQuery.of(context).size.height * 0.04;
   GlobalVariables.presentationTitleTextSize  = MediaQuery.of(context).size.height * 0.04;
 
-  GlobalVariables.presentationPageSpaceComponents  = MediaQuery.of(context).size.height * 0.04;
-  GlobalVariables.presentationPageTextSize  = MediaQuery.of(context).size.height * 0.04;
-  GlobalVariables.presentationPageTitleSize  = MediaQuery.of(context).size.height * 0.04;
-  GlobalVariables.presentationPageBottomBarSize  = MediaQuery.of(context).size.height * 0.04;
+  GlobalVariables.presentationPageSpaceComponents  = MediaQuery.of(context).size.height * 0.03;
+  GlobalVariables.presentationPageTextSize  = MediaQuery.of(context).size.height * 0.026;
+  GlobalVariables.presentationPageTitleSize  = MediaQuery.of(context).size.height * 0.035;
+  GlobalVariables.presentationPageBottomBarSize  = MediaQuery.of(context).size.height * 0.05;
+  GlobalVariables.presentationPageSpaceArrowBack  = MediaQuery.of(context).size.height * 0.03;
 
   GlobalVariables.informationImageWidth  = MediaQuery.of(context).size.width;
   GlobalVariables.informationImageHeight  = MediaQuery.of(context).size.height*0.4;

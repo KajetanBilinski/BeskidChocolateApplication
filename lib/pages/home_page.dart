@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
         currentPage = _pageController.page!.round();
       });
     });
-    Timer.periodic(const Duration(seconds: 2), (timer) {
+    Timer.periodic(const Duration(seconds: 6), (timer) {
       if (currentPage < imagePaths.length - 1) {
         currentPage++;
       } else {

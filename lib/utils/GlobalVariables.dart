@@ -42,6 +42,7 @@ class GlobalVariables {
   static double presentationSpaceTitle=0.0;
 
   static double presentationPageSpaceComponents=0.0;
+  static double presentationPageSpaceArrowBack=0.0;
   static double presentationPageTextSize=0.0;
   static double presentationPageTitleSize=0.0;
   static double presentationPageBottomBarSize=0.0;

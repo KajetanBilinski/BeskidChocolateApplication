@@ -90,7 +90,8 @@ class _HomePageState extends State<HomePage> {
                   UtilsJson.HPButtonText2!, () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const AboutUs()));
+                  MaterialPageRoute(builder: (context) => const AboutUs())
+                );
               }
               ),
               SizedBox(height: GlobalVariables.spaceButtonsHomePage),

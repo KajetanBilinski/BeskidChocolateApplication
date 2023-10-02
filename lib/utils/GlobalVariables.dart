@@ -1,6 +1,8 @@
 
 class GlobalVariables {
 
+  static int maxPages = 0;
+
   static double backIconSize = 0.0;
 
   static double fontSizeButtonHomePage = 0.0;
@@ -38,6 +40,11 @@ class GlobalVariables {
   static double presentationNumberTextSize=0.0;
   static double presentationTitleTextSize=0.0;
   static double presentationSpaceTitle=0.0;
+
+  static double presentationPageSpaceComponents=0.0;
+  static double presentationPageTextSize=0.0;
+  static double presentationPageTitleSize=0.0;
+  static double presentationPageBottomBarSize=0.0;
 
   static double informationImageWidth=0.0;
   static double informationImageHeight=0.0;

@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
 
 void initializeGlobalValues(BuildContext context)
 {
+  GlobalVariables.maxPages = UtilsJson.PPPageFields!.length;
   GlobalVariables.backIconSize = MediaQuery.of(context).size.height * 0.05;
 
   GlobalVariables.fontSizeButtonHomePage = MediaQuery.of(context).size.height * 0.03;
@@ -68,6 +69,11 @@ void initializeGlobalValues(BuildContext context)
   GlobalVariables.presentationButtonTextSize  = MediaQuery.of(context).size.height * 0.025;
   GlobalVariables.presentationNumberTextSize  = MediaQuery.of(context).size.height * 0.04;
   GlobalVariables.presentationTitleTextSize  = MediaQuery.of(context).size.height * 0.04;
+
+  GlobalVariables.presentationPageSpaceComponents  = MediaQuery.of(context).size.height * 0.04;
+  GlobalVariables.presentationPageTextSize  = MediaQuery.of(context).size.height * 0.04;
+  GlobalVariables.presentationPageTitleSize  = MediaQuery.of(context).size.height * 0.04;
+  GlobalVariables.presentationPageBottomBarSize  = MediaQuery.of(context).size.height * 0.04;
 
   GlobalVariables.informationImageWidth  = MediaQuery.of(context).size.width;
   GlobalVariables.informationImageHeight  = MediaQuery.of(context).size.height*0.4;

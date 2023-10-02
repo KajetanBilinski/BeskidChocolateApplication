@@ -72,6 +72,19 @@ flutter:
     - assets/icons/home_page/
     - assets/icons/about_us_page/
     - assets/icons/information_page/
+    - assets/icons/presentation_page/
+    - assets/images/presentation_page/1/
+    - assets/images/presentation_page/2/
+    - assets/images/presentation_page/3/
+    - assets/images/presentation_page/4/
+    - assets/images/presentation_page/5/
+    - assets/images/presentation_page/6/
+    - assets/images/presentation_page/7/
+    - assets/images/presentation_page/8/
+    - assets/images/presentation_page/9/
+    - assets/images/presentation_page/10/
+    - assets/images/presentation_page/11/
+    - assets/images/presentation_page/12/
     - assets/text/
 
   # An image asset can refer to one or more resolution-specific "variants", see

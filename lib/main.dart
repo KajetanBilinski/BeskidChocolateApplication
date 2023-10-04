@@ -73,16 +73,17 @@ void initializeGlobalValues(BuildContext context)
   GlobalVariables.presentationPageSpaceComponents  = MediaQuery.of(context).size.height * 0.03;
   GlobalVariables.presentationPageTextSize  = MediaQuery.of(context).size.height * 0.026;
   GlobalVariables.presentationPageTitleSize  = MediaQuery.of(context).size.height * 0.035;
-  GlobalVariables.presentationPageBottomBarSize  = MediaQuery.of(context).size.height * 0.05;
-  GlobalVariables.presentationPageSpaceArrowBack  = MediaQuery.of(context).size.height * 0.03;
+  GlobalVariables.presentationPageBottomBarSize  = MediaQuery.of(context).size.height * 0.055;
+  GlobalVariables.presentationPageSpaceArrowBack  = MediaQuery.of(context).size.height * 0.06;
+  GlobalVariables.presentationPageInsets = MediaQuery.of(context).size.height * 0.02;
 
   GlobalVariables.informationImageWidth  = MediaQuery.of(context).size.width;
   GlobalVariables.informationImageHeight  = MediaQuery.of(context).size.height*0.4;
   GlobalVariables.informationSpaceTextLeft  = MediaQuery.of(context).size.width*0.07;
   GlobalVariables.informationSpaceTextDown  = MediaQuery.of(context).size.height*0.03;
-  GlobalVariables.informationImageTextSize  = MediaQuery.of(context).size.height*0.02;
-  GlobalVariables.informationImageTitleSize  = MediaQuery.of(context).size.height*0.035;
-  GlobalVariables.informationContentTextSize  = MediaQuery.of(context).size.height*0.04;
+  GlobalVariables.informationImageTextSize  = MediaQuery.of(context).size.height*0.022;
+  GlobalVariables.informationImageTitleSize  = MediaQuery.of(context).size.height*0.032;
+  GlobalVariables.informationContentTextSize  = MediaQuery.of(context).size.height*0.025;
   GlobalVariables.informationSpaceImage  = MediaQuery.of(context).size.height*0.015;
   GlobalVariables.informationSpaceIcon  = MediaQuery.of(context).size.height*0.04;
   GlobalVariables.informationSpaceRow  = MediaQuery.of(context).size.height*0.04;

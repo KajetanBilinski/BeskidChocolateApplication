@@ -15,65 +15,65 @@ class PresentationMain extends StatelessWidget {
         home: Scaffold(
             body: Center(
                 child:
-                    ListView(
-                      padding: EdgeInsets.zero,
+                ListView(
+                  padding: EdgeInsets.zero,
+                  children: [
+                    GlobalComponents.backArrow(context,HomePage(),true,false),
+                    const SizedBox(height: 25),
+                    Column(
                       children: [
-                        GlobalComponents.backArrow(context,HomePage(),true,false),
-                        const SizedBox(height: 25),
-                        Column(
-                          children: [
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            Row(
-                              children:
-                              [
-                                SizedBox(
-                                    width: GlobalVariables.spaceBackIconWidthAboutUs),
-                                Text(
-                                  'Zwiedzanie',
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                      fontFamily: 'Lato',
-                                      fontSize: GlobalVariables.presentationTitleTextSize
-                                  ),
-                                )
-                              ],
-                            ),
-
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Row(
+                          children:
+                          [
+                            SizedBox(
+                                width: GlobalVariables.spaceBackIconWidthAboutUs),
+                            Text(
+                              'Zwiedzanie',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontFamily: 'Lato',
+                                  fontSize: GlobalVariables.presentationTitleTextSize
+                              ),
+                            )
                           ],
                         ),
 
-
-                        Column(
-                            children:
-                            [
-                              SizedBox(height: GlobalVariables.presentationSpaceTitle),
-                              Container(
-                                alignment: Alignment.center,
-                                width: GlobalVariables.presentationButtonWidth,
-                                child:
-                                createFlexColumn(context)
-                              )
-
-                            ]
-                        )
                       ],
-                    )
+                    ),
 
+
+                    Column(
+                        children:
+                        [
+                          SizedBox(height: GlobalVariables.presentationSpaceTitle),
+                          Container(
+                              alignment: Alignment.center,
+                              width: GlobalVariables.presentationButtonWidth,
+                              child:
+                              createFlexColumn(context)
+                          )
+
+                        ]
+                    )
+                  ],
                 )
+
             )
-        );
+        )
+    );
 
   }
   Widget createFlexColumn(BuildContext context)
   {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          for (int i = 1; i < UtilsJson.PMTextButtonTitles!.length+1; i++)
-            Column(
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        for (int i = 1; i < UtilsJson.PMTextButtonTitles!.length+1; i++)
+          Column(
               children:[
                 createInkWell(
                     UtilsJson.PMImageButtons![i-1],
@@ -83,19 +83,20 @@ class PresentationMain extends StatelessWidget {
                 ),
                 SizedBox(height: GlobalVariables.presentationSpaceButton)
               ]
-            ),
-        ],
-      );
+          ),
+      ],
+    );
   }
 
   Widget createInkWell
       (
-        String imagePath,
-        String number,
-        String text,
-        BuildContext context
+      String imagePath,
+      String number,
+      String text,
+      BuildContext context
       )
   {
+    String t = text.toUpperCase();
     return InkWell(
       onTap: () {
         Navigator.push(
@@ -115,33 +116,36 @@ class PresentationMain extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          Positioned(
-            left: 15.0,
-            bottom: 15.0,
-            child: RichText(
-              text: TextSpan(
+          Container(
+            width: GlobalVariables.presentationButtonWidth,
+            height: GlobalVariables.presentationButtonHeight,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 15, bottom: 15, right: 3),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TextSpan(
-                    text: '$number\n',
-                    style:  TextStyle(
+                  Text(
+                    '$number',
+                    style: TextStyle(
                       color: Colors.white,
                       fontSize: GlobalVariables.presentationNumberTextSize,
-                      fontFamily: 'Lato'
-
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Lato',
                     ),
                   ),
-                  TextSpan(
-                    text: text.toUpperCase(),
-                    style:  TextStyle(
-                        color: Colors.white,
-                        fontSize: GlobalVariables.presentationButtonTextSize,
-                        fontFamily: 'Lato'
+                  Text(
+                    t,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: GlobalVariables.presentationButtonTextSize,
+                      fontFamily: 'Lato',
                     ),
                   ),
                 ],
               ),
             ),
-          ),
+          )
         ],
       ),
     );

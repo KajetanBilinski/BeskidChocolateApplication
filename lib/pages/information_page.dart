@@ -73,17 +73,21 @@ class InformationPage extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      SizedBox(width: GlobalVariables.informationSpaceRow),
+
                       Flexible(
                         child:
-                      Text(
-                        UtilsJson.IPMainText!,
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: GlobalVariables.informationImageTextSize,
-                            fontFamily: 'Lato'
+                        Padding(
+                            padding: EdgeInsets.symmetric(horizontal: GlobalVariables.informationSpaceRow),
+                            child: Text(
+                              UtilsJson.IPMainText!,
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: GlobalVariables.informationContentTextSize,
+                                  fontFamily: 'Lato'
+                              ),
+                            )
                         ),
-                      ))
+                      )
                     ],
                   )
 

@@ -28,7 +28,7 @@ class PresentationPage extends StatelessWidget {
                           children: [
                             if(f!.Type == 'text')
                               Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                                padding: EdgeInsets.symmetric(horizontal: GlobalVariables.presentationPageInsets),
                                 child: Text(
                                   f.Content,
                                   style: TextStyle(
@@ -46,7 +46,7 @@ class PresentationPage extends StatelessWidget {
                                 Column(
                                   children: [
                                     Padding(
-                                        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                                        padding: EdgeInsets.symmetric(horizontal: GlobalVariables.presentationPageInsets/2),
                                         child: Text(
                                             f.Content,
                                             textAlign: TextAlign.center,
@@ -87,7 +87,7 @@ class PresentationPage extends StatelessWidget {
                   right: 0,
                   child: Container(
                       color: Colors.white,
-                      height: 50,
+                      height: GlobalVariables.presentationPageSpaceArrowBack,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[

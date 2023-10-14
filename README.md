@@ -21,10 +21,10 @@ The primary goal of this app is to provide a tantalizing glimpse of the factory'
 
 Here are a few snapshots from the app to give you a taste of what awaits you on your virtual tour:
 
-<img src="https://user-images.githubusercontent.com/75189414/275230316-a01589e9-fbdd-4ed4-b25a-7948795fc69b.png" alt="Screenshot 1" width="460" height="983">
-<img src="https://user-images.githubusercontent.com/75189414/275230298-685c02ee-0311-43d5-ae48-07ff2c977933.png" alt="Screenshot 2" width="460" height="983">
-<img src="https://user-images.githubusercontent.com/75189414/275230308-6ee3ab3a-443f-4b79-bfd2-2e14d3498eb1.png" alt="Screenshot 3" width="460" height="983">
-<img src="https://user-images.githubusercontent.com/75189414/275230324-5a9a2962-6563-4c2e-878e-e1c66518d076.png" alt="Screenshot 4" width="460" height="983">
+<img src="https://user-images.githubusercontent.com/75189414/275230316-a01589e9-fbdd-4ed4-b25a-7948795fc69b.png" alt="Screenshot 1" width="307" height="655">
+<img src="https://user-images.githubusercontent.com/75189414/275230298-685c02ee-0311-43d5-ae48-07ff2c977933.png" alt="Screenshot 2" width="307" height="655">
+<img src="https://user-images.githubusercontent.com/75189414/275230308-6ee3ab3a-443f-4b79-bfd2-2e14d3498eb1.png" alt="Screenshot 3" width="307" height="655">
+<img src="https://user-images.githubusercontent.com/75189414/275230324-5a9a2962-6563-4c2e-878e-e1c66518d076.png" alt="Screenshot 4" width="307" height="655">
 
 ## Getting Started
 

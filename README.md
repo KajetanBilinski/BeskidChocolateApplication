@@ -56,21 +56,19 @@ flutter run
 Start exploring the world of chocolate right from your device!
 
 The app is also available on Google Play !
-
 Click the icon below to visit the website
 
 <a href="https://play.google.com/store/apps/details?id=beskid_chcolate.app">
   <img src="https://user-images.githubusercontent.com/75189414/275226475-9d436866-7f45-4c08-9b5b-dd94eb0a4044.png" alt="GooglePlay" width="25" height="25">
 </a>
 
-
-##Report Bugs
+## Report Bugs
 
 We strive to provide the best experience possible, but bugs can sometimes creep in. If you encounter any issues or have suggestions for improvements, please report them to us. Your feedback is invaluable in making this app even better.
 
 You can report bugs and errors by sending an email to kaje.bile@gmail.com. We appreciate your support and will work diligently to address any reported issues promptly.
 
-##Contact
+## Contact
 
 If you have any questions, feedback, or just want to say hello, feel free to reach out to us at kaje.bile@gmail.com. We look forward to hearing from you and hope you enjoy your digital chocolate factory tour!
 

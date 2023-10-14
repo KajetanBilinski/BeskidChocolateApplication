@@ -54,8 +54,9 @@ flutter run
 ```
 Start exploring the world of chocolate right from your device!
 
-The app is also available on google play store !
-https://play.google.com/store/apps/details?id=beskid_chcolate.app
+The app is also available on Google Play !
+[![GooglePlay](ścieżka/do/zdjęcia)](https://play.google.com/store/apps/details?id=beskid_chcolate.app)
+
 
 ##Report Bugs
 

@@ -75,4 +75,5 @@ Happy exploring and, who knows, perhaps we'll see you at Beskid Chocolate Factor
 ## Authors
 
 Author - @KajetanBilinski
+
 Design - @JustynaWozniak

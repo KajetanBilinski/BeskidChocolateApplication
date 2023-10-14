@@ -31,18 +31,22 @@ To get started with the Beskid Chocolate Factory Tour App, follow these simple s
 
 1. **Clone the Repository:**
 
-   ```bash
-   git clone https://github.com/yourusername/beskid-chocolate-app.git
-   cd beskid-chocolate-app
+```bash
+git clone https://github.com/yourusername/beskid-chocolate-app.git
+cd beskid-chocolate-app
+```
+
 2. **Install Dependencies:**
 
-  ```bash
-  flutter pub get
-  ```
+```bash
+flutter pub get
+```
+
 3. **Run the App:**
-  ```
-  flutter run
-  ```
+
+```
+flutter run
+```
 Start exploring the world of chocolate right from your device!
 
 The app is also available on google play store !

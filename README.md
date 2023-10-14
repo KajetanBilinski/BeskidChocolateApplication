@@ -27,7 +27,7 @@ Here are a few snapshots from the app to give you a taste of what awaits you on 
 
 ## Released History
 
-** 1.0.0 Beta - Released application on GooglePlay - 06.10.2023**
+**1.0.0 Beta - Released application on GooglePlay - 06.10.2023**
 
 ## Getting Started
 

@@ -33,6 +33,8 @@ To get started with the Beskid Chocolate Factory Tour App, follow these simple s
 
 ```bash
 git clone https://github.com/yourusername/beskid-chocolate-app.git
+```
+```bash
 cd beskid-chocolate-app
 ```
 

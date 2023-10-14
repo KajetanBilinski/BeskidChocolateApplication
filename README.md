@@ -57,7 +57,7 @@ Start exploring the world of chocolate right from your device!
 
 The app is also available on Google Play !
 <a href="https://play.google.com/store/apps/details?id=beskid_chcolate.app">
-  <img src="https://user-images.githubusercontent.com/75189414/275226475-9d436866-7f45-4c08-9b5b-dd94eb0a4044.png" alt="GooglePlay" width="50" height="50">
+  <img src="https://user-images.githubusercontent.com/75189414/275226475-9d436866-7f45-4c08-9b5b-dd94eb0a4044.png" alt="GooglePlay" width="25" height="25">
 </a>
 
 

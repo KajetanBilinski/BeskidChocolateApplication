@@ -21,6 +21,7 @@ The primary goal of this app is to provide a tantalizing glimpse of the factory'
 
 Here are a few snapshots from the app to give you a taste of what awaits you on your virtual tour:
 ![Screenshot 1](https://user-images.githubusercontent.com/75189414/275230316-a01589e9-fbdd-4ed4-b25a-7948795fc69b.png)
+<img src="https://user-images.githubusercontent.com/75189414/275230316-a01589e9-fbdd-4ed4-b25a-7948795fc69b.png" alt="Scren1" width="300" height="500">
 ![Screenshot 2](https://user-images.githubusercontent.com/75189414/275230298-685c02ee-0311-43d5-ae48-07ff2c977933.png)
 ![Screenshot 3](https://user-images.githubusercontent.com/75189414/275230308-6ee3ab3a-443f-4b79-bfd2-2e14d3498eb1.png)
 ![Screenshot 4](https://user-images.githubusercontent.com/75189414/275230324-5a9a2962-6563-4c2e-878e-e1c66518d076.png)

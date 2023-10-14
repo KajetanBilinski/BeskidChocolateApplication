@@ -8,6 +8,7 @@ Welcome to the Beskid Chocolate Factory Tour App! This Flutter application is de
 - [Getting Started](#getting-started)
 - [Report Bugs](#report-bugs)
 - [Contact](#contact)
+- [Authors](#authors)
 
 ## About
 
@@ -70,3 +71,8 @@ You can report bugs and errors by sending an email to kaje.bile@gmail.com. We ap
 If you have any questions, feedback, or just want to say hello, feel free to reach out to us at kaje.bile@gmail.com. We look forward to hearing from you and hope you enjoy your digital chocolate factory tour!
 
 Happy exploring and, who knows, perhaps we'll see you at Beskid Chocolate Factory in Węgierska Górka someday! 🍫
+
+## Authors
+
+Author - @KajetanBilinski
+Design - @JustynaWozniak

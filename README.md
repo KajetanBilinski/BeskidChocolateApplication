@@ -33,13 +33,13 @@ To get started with the Beskid Chocolate Factory Tour App, follow these simple s
 1. **Clone the Repository:**
 
 ```bash
-git clone https://github.com/yourusername/beskid-chocolate-app.git
+git clone https://github.com/KajetanBilinski/BeskidChocolateApplication.git
 ```
 
 2. **Go to the main app folder:**
 
 ```bash
-cd beskid-chocolate-app
+cd BeskidChocolate
 ```
 
 3. **Install Dependencies:**

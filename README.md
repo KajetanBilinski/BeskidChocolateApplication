@@ -2,8 +2,6 @@
 
 Welcome to the Beskid Chocolate Factory Tour App! This Flutter application is designed to provide an immersive online experience of touring the delightful world of chocolate at Beskid Chocolate Factory in Węgierska Górka, Poland. Whether you're a chocolate enthusiast or just curious to explore the magic behind chocolate-making, this app is your digital gateway to the factory.
 
-![Beskid Chocolate Factory](https://user-images.githubusercontent.com/75189414/275227518-9eebfaca-44c4-46e5-bdda-037b7b2762af.jpg)
-
 ## Table of Contents
 - [About](#about)
 - [Screenshots](#screenshots)
